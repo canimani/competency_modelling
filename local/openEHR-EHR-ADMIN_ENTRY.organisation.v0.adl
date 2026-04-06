@@ -23,12 +23,20 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4e072f32cf9de59c66135f24c0bcfe00">
+		["MD5-CAM-1.0.1"] = <"5b7368363c7c3b028fe7d59647bd9e6b">
 		["build_uid"] = <"828b5e4c-a84a-312e-896e-b42c47c380bf">
 	>
 
 definition
-	ADMIN_ENTRY[at0000] matches {*}    -- Organisation
+	ADMIN_ENTRY[at0000] matches {    -- Organisation
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					CLUSTER[at0002] occurrences matches {0..1} matches {*}    -- organisation_slot
+				}
+			}
+		}
+	}
 
 ontology
 	term_definitions = <
@@ -37,6 +45,14 @@ ontology
 				["at0000"] = <
 					text = <"Organisation">
 					description = <"Organisation">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"organisation_slot">
+					description = <"">
 				>
 			>
 		>
