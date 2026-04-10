@@ -122,7 +122,7 @@ HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven Inter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"97F0D3BB6CACF9297BB434EDE9624022">
+		["MD5-CAM-1.0.1"] = <"eee00d0e5f83fdb7f5458caca969023d">
 		["build_uid"] = <"c99cff91-c6d7-4097-805d-e9a53d62b111">
 		["revision"] = <"1.0.3">
 	>
@@ -169,6 +169,26 @@ definition
 			ELEMENT[at0019] occurrences matches {0..1} matches {    -- Comment
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0026] occurrences matches {0..1} matches {    -- organisation_category
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0030] occurrences matches {0..1} matches {    -- organisation_type
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0029] occurrences matches {0..1} matches {    -- oraganisation_maturity
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0032] occurrences matches {0..1} matches {    -- organisation_size
+				value matches {
+					DV_CODED_TEXT matches {*}
 				}
 			}
 		}
@@ -222,6 +242,22 @@ ontology
 					text = <"Electronic communication">
 					description = <"Details about one or more types of electronic communication for the organisation.">
 				>
+				["at0026"] = <
+					text = <"organisation_category">
+					description = <"Organisation category which refers to the group that the organisation type belongs to e.g. healthservice provider or academic/research institute">
+				>
+				["at0029"] = <
+					text = <"oraganisation_maturity">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"organisation_type">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"organisation_size">
+					description = <"">
+				>
 			>
 		>
 		["nb"] = <
@@ -269,6 +305,22 @@ ontology
 				["at0022"] = <
 					text = <"Elektronisk kommunikasjon">
 					description = <"Detaljer om én eller flere former for elektronisk kommunikasjon med organisasjonen.">
+				>
+				["at0026"] = <
+					text = <"*organisation_category (en)">
+					description = <"*Organisation category which refers to the group that the organisation type belongs to e.g. healthservice provider or academic/research institute (en)">
+				>
+				["at0029"] = <
+					text = <"*oraganisation_maturity (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*organisation_type (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*organisation_size (en)">
+					description = <"">
 				>
 			>
 		>
@@ -318,6 +370,22 @@ ontology
 					text = <"Elektronische Kommunikation">
 					description = <"Details zu einer oder mehreren Arten der elektronischen Kommunikation für die Organisation.">
 				>
+				["at0026"] = <
+					text = <"*organisation_category (en)">
+					description = <"*Organisation category which refers to the group that the organisation type belongs to e.g. healthservice provider or academic/research institute (en)">
+				>
+				["at0029"] = <
+					text = <"*oraganisation_maturity (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*organisation_type (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*organisation_size (en)">
+					description = <"">
+				>
 			>
 		>
 		["sv"] = <
@@ -365,6 +433,22 @@ ontology
 				["at0022"] = <
 					text = <"Elektronisk kommunikation">
 					description = <"Ett eller flera elektroniska kommunikationssätt som organisationen använder.">
+				>
+				["at0026"] = <
+					text = <"*organisation_category (en)">
+					description = <"*Organisation category which refers to the group that the organisation type belongs to e.g. healthservice provider or academic/research institute (en)">
+				>
+				["at0029"] = <
+					text = <"*oraganisation_maturity (en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*organisation_type (en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*organisation_size (en)">
+					description = <"">
 				>
 			>
 		>
