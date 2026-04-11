@@ -122,7 +122,7 @@ HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven Inter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"eee00d0e5f83fdb7f5458caca969023d">
+		["MD5-CAM-1.0.1"] = <"0262796c3cdee1c56348bd682edb2edc">
 		["build_uid"] = <"c99cff91-c6d7-4097-805d-e9a53d62b111">
 		["revision"] = <"1.0.3">
 	>
@@ -130,12 +130,12 @@ HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven Inter
 definition
 	CLUSTER[at0000] matches {    -- Organisation
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Name
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- name
 				value matches {
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..*} matches {    -- Identifier
+			ELEMENT[at0003] occurrences matches {0..*} matches {    -- identifier
 				value matches {
 					DV_IDENTIFIER matches {*}
 					DV_TEXT matches {*}
@@ -204,7 +204,7 @@ ontology
 					comment = <"For example: a company, institution, association, network, department, community group, healthcare practice group, payer/insurer, care team, or a group of neighbours who provide care or support.">
 				>
 				["at0001"] = <
-					text = <"Name">
+					text = <"name">
 					description = <"The unstructured name or label for the organisation.">
 					comment = <"For example: 'Royal Children's Hospital'; 'ABC District Nursing Service'; 'YNWA Oslo' or 'JB Smith Lawyers'.">
 				>
@@ -213,7 +213,7 @@ ontology
 					description = <"Details about one or more people within the organisation.">
 				>
 				["at0003"] = <
-					text = <"Identifier">
+					text = <"identifier">
 					description = <"Identifier associated with the organisation.">
 					comment = <"Occurrences for this data element is set to 0..* to allow for more than one Identifier to be recorded. Note that the ID data type contains multiple subcomponents for recording the ID value, type, issuer and assigner.">
 				>
@@ -268,7 +268,7 @@ ontology
 					comment = <"For eksempel: Et firma, institusjon, selskap, forening, nettverk, avdeling, gruppe i nærmiljøet, forsikringsselskap, behandlingsteam eller en gruppe av naboer som opptrer som støtte.">
 				>
 				["at0001"] = <
-					text = <"Navn">
+					text = <"*name (en)">
 					description = <"Ustrukturert navn for organisasjonen.">
 					comment = <"For eksempel: \"Haukeland Sykehus\", \"Årstad hjemmesykepleie\", \"YNWA Oslo\" eller \"JB Smith advokater\".">
 				>
@@ -277,7 +277,7 @@ ontology
 					description = <"Detaljer om én eller flere personer i organisasjonen.">
 				>
 				["at0003"] = <
-					text = <"Identifikator">
+					text = <"*identifier (en)">
 					description = <"Identifikator for organisasjonen.">
 					comment = <"Forekomster for dette dataelementet er satt til 0..* for å tillate at mer enn én identifikator kan registreres. Merk at ID-datatypen inneholder flere underkomponenter for registrering av ID-verdi, type, utsteder og tilordnet.">
 				>
@@ -332,7 +332,7 @@ ontology
 					comment = <"Zum Beispiel: ein Unternehmen, eine Institution, ein Verband, ein Netzwerk, eine Abteilung, eine Gemeindegruppe, eine Gesundheitspraxisgruppe, ein Kostenträger/Versicherer, ein Pflegeteam oder eine Gruppe von Nachbarn, die Pflege oder Unterstützung leisten.">
 				>
 				["at0001"] = <
-					text = <"Namenszeile">
+					text = <"*name (en)">
 					description = <"Der Name oder Bezeichnung der Organisation in unstrukturierter Form.">
 					comment = <"Zum Beispiel: „Royal Children's Hospital“, \"ABC-Krankenpflegedienst\", „YNWA Oslo“ oder „JB Smith Rechtsanwälte“.">
 				>
@@ -341,7 +341,7 @@ ontology
 					description = <"Details zu einer oder mehreren Personen innerhalb der Organisation.">
 				>
 				["at0003"] = <
-					text = <"Identifier">
+					text = <"*identifier (en)">
 					description = <"Identifikator, der der identifizierten Organisation zugeordnet ist.">
 					comment = <"Kardinalität für dieses Datenelement wird auf 0..* gesetzt, damit mehr als ein Identifikator aufgezeichnet werden kann. Beachten Sie, dass der ID-Datentyp mehrere Unterkomponenten zum Aufzeichnen des ID-Werts, -Typs, -Ausstellers und -Zuweisers enthält.">
 				>
@@ -396,7 +396,7 @@ ontology
 					comment = <"Exempelvis företag, institution, förening, nätverk, avdelning, samhällsgrupp, vårdgivargrupp, försäkringstagare eller försäkringsgivare, vårdteam, eller grupp som ger vård eller stöd.">
 				>
 				["at0001"] = <
-					text = <"Namn">
+					text = <"*name (en)">
 					description = <"Namnet som en organisation är känd under.">
 					comment = <"Exempelvis Akademiska sjukhuset, Sahlgrenska universitetssjukhuset, YNWA Oslo, Karolinska universitetssjukhuset or JB Smith Lawyers.">
 				>
@@ -405,7 +405,7 @@ ontology
 					description = <"Uppgifter om en eller flera kontaktpersoner inom organisationen.">
 				>
 				["at0003"] = <
-					text = <"Identifierare">
+					text = <"*identifier (en)">
 					description = <"Identifierare associerad med organisationen.">
 					comment = <"Förekomsten av identifierare är satt till 0..*, vilket innebär att mer en typ av identifierare kan användas. Observera att det finns möjlighet att använda underliggande id-komponenter som typ, utfärdare och tillståndsgivare.">
 				>
