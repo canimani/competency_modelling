@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7084115e5aa03164fb42b355fc0d23ec">
+		["MD5-CAM-1.0.1"] = <"738e796ce5e6f235afb5b240f41501db">
 		["build_uid"] = <"2fca005a-0a5d-3ebf-9f2c-709561cc25ba">
 	>
 
@@ -32,18 +32,29 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					allow_archetype CLUSTER[at0002] occurrences matches {0..1} matches {    -- ecosystem_holder
-						include
-							archetype_id/value matches {/.*/}
-					}
 					ELEMENT[at0003] occurrences matches {0..1} matches {    -- creation_date
 						value matches {
 							DV_DATE matches {*}
 						}
 					}
+					ELEMENT[at0006] matches {    -- ecosystem_maturity
+						value matches {
+							0|[local::at0007],
+							1|[local::at0008],
+							2|[local::at0009]
+						}
+					}
 					ELEMENT[at0004] occurrences matches {0..1} matches {    -- created_by
 						value matches {
 							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {1..*} matches {    -- organisation_refs
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+						name matches {
+							DV_CODED_TEXT matches {*}
 						}
 					}
 				}
@@ -63,16 +74,32 @@ ontology
 					text = <"Item tree">
 					description = <"@ internal @">
 				>
-				["at0002"] = <
-					text = <"ecosystem_holder">
-					description = <"">
-				>
 				["at0003"] = <
 					text = <"creation_date">
 					description = <"">
 				>
 				["at0004"] = <
 					text = <"created_by">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"organisation_refs">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"ecosystem_maturity">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Emerging">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Developing">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Optmising">
 					description = <"">
 				>
 			>
