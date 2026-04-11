@@ -23,12 +23,31 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"df18991179e1896bd080ef24cb0a5fcf">
 		["build_uid"] = <"9331fb9f-57ef-3666-983b-fa19e2898594">
-		["MD5-CAM-1.0.1"] = <"4fdeed134f0f0b17c579d625bdb04043">
 	>
 
 definition
-	CLUSTER[at0000] matches {*}    -- Ecosystem
+	CLUSTER[at0000] matches {    -- Ecosystem
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- name
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {*}    -- identifier
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- ecosystem_maturity
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- country
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
 
 ontology
 	term_definitions = <
@@ -37,6 +56,22 @@ ontology
 				["at0000"] = <
 					text = <"Ecosystem">
 					description = <"Ecosystem">
+				>
+				["at0001"] = <
+					text = <"name">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"identifier">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"ecosystem_maturity">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"country">
+					description = <"">
 				>
 			>
 		>
