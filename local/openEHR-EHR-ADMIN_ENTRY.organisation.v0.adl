@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a2be439604f8942c1837330948a6a564">
+		["MD5-CAM-1.0.1"] = <"a4f6900734f55c4f62aa1ef6312cfaea">
 		["build_uid"] = <"828b5e4c-a84a-312e-896e-b42c47c380bf">
 	>
 
@@ -35,6 +35,16 @@ definition
 					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- organisation_holder
 						include
 							archetype_id/value matches {/.*/}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- creation_date
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- created_by
+						value matches {
+							DV_TEXT matches {*}
+						}
 					}
 				}
 			}
@@ -55,6 +65,14 @@ ontology
 				>
 				["at0003"] = <
 					text = <"organisation_holder">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"creation_date">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"created_by">
 					description = <"">
 				>
 			>
