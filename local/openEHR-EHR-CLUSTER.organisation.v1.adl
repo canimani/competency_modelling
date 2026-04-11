@@ -122,7 +122,7 @@ HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven Inter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0262796c3cdee1c56348bd682edb2edc">
+		["MD5-CAM-1.0.1"] = <"2afb1ae2eae78b2c0202f36da9f1cae8">
 		["build_uid"] = <"c99cff91-c6d7-4097-805d-e9a53d62b111">
 		["revision"] = <"1.0.3">
 	>
@@ -171,24 +171,41 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			ELEMENT[at0026] occurrences matches {0..1} matches {    -- organisation_category
+			ELEMENT[at0033] matches {    -- organisation_category
 				value matches {
-					DV_CODED_TEXT matches {*}
+					0|[local::at0039],
+					1|[local::at0040],
+					2|[local::at0041],
+					3|[local::at0042],
+					4|[local::at0043]
 				}
 			}
-			ELEMENT[at0030] occurrences matches {0..1} matches {    -- organisation_type
+			ELEMENT[at0034] occurrences matches {0..1} matches {    -- organisation_type
 				value matches {
-					DV_CODED_TEXT matches {*}
+					0|[local::at0044],
+					1|[local::at0045],
+					2|[local::at0046],
+					3|[local::at0047],
+					4|[local::at0048],
+					5|[local::at0049],
+					6|[local::at0050],
+					7|[local::at0051],
+					8|[local::at0052],
+					9|[local::at0053],
+					10|[local::at0054],
+					11|[local::at0055],
+					12|[local::at0056],
+					13|[local::at0057],
+					14|[local::at0058],
+					15|[local::at0059],
+					16|[local::at0060]
 				}
 			}
-			ELEMENT[at0029] occurrences matches {0..1} matches {    -- oraganisation_maturity
+			ELEMENT[at0035] occurrences matches {0..1} matches {    -- organisation_size
 				value matches {
-					DV_CODED_TEXT matches {*}
-				}
-			}
-			ELEMENT[at0032] occurrences matches {0..1} matches {    -- organisation_size
-				value matches {
-					DV_CODED_TEXT matches {*}
+					0|[local::at0036],
+					1|[local::at0037],
+					2|[local::at0038]
 				}
 			}
 		}
@@ -242,20 +259,116 @@ ontology
 					text = <"Electronic communication">
 					description = <"Details about one or more types of electronic communication for the organisation.">
 				>
-				["at0026"] = <
+				["at0033"] = <
 					text = <"organisation_category">
-					description = <"Organisation category which refers to the group that the organisation type belongs to e.g. healthservice provider or academic/research institute">
-				>
-				["at0029"] = <
-					text = <"oraganisation_maturity">
 					description = <"">
 				>
-				["at0030"] = <
+				["at0034"] = <
 					text = <"organisation_type">
 					description = <"">
 				>
-				["at0032"] = <
+				["at0035"] = <
 					text = <"organisation_size">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Small">
+					description = <"<500">
+				>
+				["at0037"] = <
+					text = <"Medium">
+					description = <"501..2000">
+				>
+				["at0038"] = <
+					text = <"Large">
+					description = <">2000">
+				>
+				["at0039"] = <
+					text = <"Government">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Data & ICT Industry">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Healthcare Industry">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Research & Academia">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Health Services">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Health agencies">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Regualtors">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"ICT agencies">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"International organisations">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"Standards organisations">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"ICT Businesses">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"Telecommunication">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"Security">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"Analytics">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"Marketing">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"Insurance">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"Pharma">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"Biotech">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"Health technology">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"Research institutes & networks">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"Universities">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"Registries">
 					description = <"">
 				>
 			>
@@ -306,20 +419,116 @@ ontology
 					text = <"Elektronisk kommunikasjon">
 					description = <"Detaljer om én eller flere former for elektronisk kommunikasjon med organisasjonen.">
 				>
-				["at0026"] = <
+				["at0033"] = <
 					text = <"*organisation_category (en)">
-					description = <"*Organisation category which refers to the group that the organisation type belongs to e.g. healthservice provider or academic/research institute (en)">
-				>
-				["at0029"] = <
-					text = <"*oraganisation_maturity (en)">
 					description = <"">
 				>
-				["at0030"] = <
+				["at0034"] = <
 					text = <"*organisation_type (en)">
 					description = <"">
 				>
-				["at0032"] = <
+				["at0035"] = <
 					text = <"*organisation_size (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Small (en)">
+					description = <"*<500 (en)">
+				>
+				["at0037"] = <
+					text = <"*Medium (en)">
+					description = <"*501..2000 (en)">
+				>
+				["at0038"] = <
+					text = <"*Large (en)">
+					description = <"*>2000 (en)">
+				>
+				["at0039"] = <
+					text = <"*Government (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Data & ICT Industry (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Healthcare Industry (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Research & Academia (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Health Services (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*Health agencies (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Regualtors (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*ICT agencies (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*International organisations (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Standards organisations (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*ICT Businesses (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Telecommunication (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*Security (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*Analytics (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*Marketing (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*Insurance (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Pharma (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Biotech (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Health technology (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*Research institutes & networks (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*Universities (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Registries (en)">
 					description = <"">
 				>
 			>
@@ -370,20 +579,116 @@ ontology
 					text = <"Elektronische Kommunikation">
 					description = <"Details zu einer oder mehreren Arten der elektronischen Kommunikation für die Organisation.">
 				>
-				["at0026"] = <
+				["at0033"] = <
 					text = <"*organisation_category (en)">
-					description = <"*Organisation category which refers to the group that the organisation type belongs to e.g. healthservice provider or academic/research institute (en)">
-				>
-				["at0029"] = <
-					text = <"*oraganisation_maturity (en)">
 					description = <"">
 				>
-				["at0030"] = <
+				["at0034"] = <
 					text = <"*organisation_type (en)">
 					description = <"">
 				>
-				["at0032"] = <
+				["at0035"] = <
 					text = <"*organisation_size (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Small (en)">
+					description = <"*<500 (en)">
+				>
+				["at0037"] = <
+					text = <"*Medium (en)">
+					description = <"*501..2000 (en)">
+				>
+				["at0038"] = <
+					text = <"*Large (en)">
+					description = <"*>2000 (en)">
+				>
+				["at0039"] = <
+					text = <"*Government (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Data & ICT Industry (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Healthcare Industry (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Research & Academia (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Health Services (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*Health agencies (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Regualtors (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*ICT agencies (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*International organisations (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Standards organisations (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*ICT Businesses (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Telecommunication (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*Security (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*Analytics (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*Marketing (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*Insurance (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Pharma (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Biotech (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Health technology (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*Research institutes & networks (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*Universities (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Registries (en)">
 					description = <"">
 				>
 			>
@@ -434,20 +739,116 @@ ontology
 					text = <"Elektronisk kommunikation">
 					description = <"Ett eller flera elektroniska kommunikationssätt som organisationen använder.">
 				>
-				["at0026"] = <
+				["at0033"] = <
 					text = <"*organisation_category (en)">
-					description = <"*Organisation category which refers to the group that the organisation type belongs to e.g. healthservice provider or academic/research institute (en)">
-				>
-				["at0029"] = <
-					text = <"*oraganisation_maturity (en)">
 					description = <"">
 				>
-				["at0030"] = <
+				["at0034"] = <
 					text = <"*organisation_type (en)">
 					description = <"">
 				>
-				["at0032"] = <
+				["at0035"] = <
 					text = <"*organisation_size (en)">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"*Small (en)">
+					description = <"*<500 (en)">
+				>
+				["at0037"] = <
+					text = <"*Medium (en)">
+					description = <"*501..2000 (en)">
+				>
+				["at0038"] = <
+					text = <"*Large (en)">
+					description = <"*>2000 (en)">
+				>
+				["at0039"] = <
+					text = <"*Government (en)">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"*Data & ICT Industry (en)">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"*Healthcare Industry (en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Research & Academia (en)">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"*Health Services (en)">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"*Health agencies (en)">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"*Regualtors (en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*ICT agencies (en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*International organisations (en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Standards organisations (en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*ICT Businesses (en)">
+					description = <"">
+				>
+				["at0050"] = <
+					text = <"*Telecommunication (en)">
+					description = <"">
+				>
+				["at0051"] = <
+					text = <"*Security (en)">
+					description = <"">
+				>
+				["at0052"] = <
+					text = <"*Analytics (en)">
+					description = <"">
+				>
+				["at0053"] = <
+					text = <"*Marketing (en)">
+					description = <"">
+				>
+				["at0054"] = <
+					text = <"*Insurance (en)">
+					description = <"">
+				>
+				["at0055"] = <
+					text = <"*Pharma (en)">
+					description = <"">
+				>
+				["at0056"] = <
+					text = <"*Biotech (en)">
+					description = <"">
+				>
+				["at0057"] = <
+					text = <"*Health technology (en)">
+					description = <"">
+				>
+				["at0058"] = <
+					text = <"*Research institutes & networks (en)">
+					description = <"">
+				>
+				["at0059"] = <
+					text = <"*Universities (en)">
+					description = <"">
+				>
+				["at0060"] = <
+					text = <"*Registries (en)">
 					description = <"">
 				>
 			>
