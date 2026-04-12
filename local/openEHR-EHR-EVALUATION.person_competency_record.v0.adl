@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"ea8cd860d32db3f090a3205ec5682c92">
+		["MD5-CAM-1.0.1"] = <"5ed6732632eaa5b6bb68538b33c4ab4e">
 		["build_uid"] = <"f6435f72-8f15-3594-a415-50f392530e6a">
 	>
 
@@ -57,7 +57,25 @@ definition
 			}
 		}
 		protocol matches {
-			ITEM_TREE[at0006] matches {*}    -- Item tree
+			ITEM_TREE[at0006] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- assessor_ref
+						value matches {
+							DV_IDENTIFIER matches {
+								issuer matches {/HR_Ststem/}
+								type matches {/PERSON or ORGANISSATION/}
+								assigner matches {/PARTY_REF/}
+								id matches {/external ID/}
+							}
+						}
+					}
+				}
+			}
+		}
+		other_participations cardinality matches {0..*; unordered} matches {
+			PARTICIPATION[at0008] occurrences matches {0..1} matches {*}    -- PARTICIPATION
+			PARTICIPATION[at0009] occurrences matches {0..1} matches {*}    -- line_manager
+			PARTICIPATION[at0010] occurrences matches {0..1} matches {*}    -- hr_administrator
 		}
 	}
 
@@ -95,6 +113,22 @@ ontology
 				>
 				["at0007"] = <
 					text = <"record_date">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"PARTICIPATION">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"line_manager">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"hr_administrator">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"assessor_ref">
 					description = <"">
 				>
 			>
