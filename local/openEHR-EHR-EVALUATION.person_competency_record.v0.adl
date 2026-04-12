@@ -23,14 +23,41 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"76714e5cb05904a354da71e1a4ea0f42">
+		["MD5-CAM-1.0.1"] = <"ea8cd860d32db3f090a3205ec5682c92">
 		["build_uid"] = <"f6435f72-8f15-3594-a415-50f392530e6a">
 	>
 
 definition
 	EVALUATION[at0000] matches {    -- person_competency_record
 		data matches {
-			ITEM_TREE[at0001] matches {*}    -- Item tree
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {    -- sfia_ict_competencies
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sfia_competency-sfia_ict_competency\.v0/}
+					}
+					allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- sfia_dh_competencies
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sfia_competency-sfia_dh_competency\.v0/}
+					}
+					allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- clinical_competencies
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.clinical_non_sfia_competency\.v0/}
+					}
+					allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- other_competencies
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.other_non_sfia_competency\.v0/}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- record_date
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0006] matches {*}    -- Item tree
 		}
 	}
 
@@ -45,6 +72,30 @@ ontology
 				["at0001"] = <
 					text = <"Item tree">
 					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"sfia_ict_competencies">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"sfia_dh_competencies">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"clinical_competencies">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"other_competencies">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0007"] = <
+					text = <"record_date">
+					description = <"">
 				>
 			>
 		>
