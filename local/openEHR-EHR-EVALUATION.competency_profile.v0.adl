@@ -1,0 +1,138 @@
+archetype (adl_version=1.4; uid=9064d8bf-ddbb-44b2-ae40-8c03a97000f5)
+	openEHR-EHR-EVALUATION.competency_profile.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-15">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"80475cd3569abd3353a59f5bd3d2fdf4">
+		["build_uid"] = <"f5697aa2-5662-38cc-8c0d-24cb2c74409c">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- competency_profile
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- role_identifier
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- role_name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- role_type
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- role_type
+						value matches {
+							DV_ORDINAL matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- role_version
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- sfia_ict_competencies
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sfia_competency-sfia_ict_competency\.v0/}
+					}
+					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- sfia_dh_competencies
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sfia_competency-sfia_dh_competency\.v0/}
+					}
+					allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {    -- clinical_non_sfia_cometencies
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.clinical_non_sfia_competency\.v0/}
+					}
+					allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- other_non_sfia_competencies
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.other_non_sfia_competency\.v0/}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0012] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"competency_profile">
+					description = <"competency_profile">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"role_identifier">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"role_name">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"role_type">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"role_type">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"role_version">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"sfia_ict_competencies">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"sfia_dh_competencies">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"clinical_non_sfia_cometencies">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"other_non_sfia_competencies">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+			>
+		>
+	>
