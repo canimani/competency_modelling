@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0e8fe457efb3d72b61c3426cf89571f6">
+		["MD5-CAM-1.0.1"] = <"24252162655f639491df661da87297d3">
 		["build_uid"] = <"7b6870d8-8078-3101-b1b0-182a28a32a7e">
 	>
 
@@ -39,6 +39,14 @@ definition
 				value matches {
 					DV_TEXT matches {*}
 				}
+			}
+			allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- organisations
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
+			}
+			allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- organisations_groups
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation_group\.v0/}
 			}
 		}
 	}
@@ -57,6 +65,14 @@ ontology
 				>
 				["at0004"] = <
 					text = <"ecosystem_name">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"organisations">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"organisations_groups">
 					description = <"">
 				>
 			>
