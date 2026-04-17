@@ -1,0 +1,134 @@
+archetype (adl_version=1.4; uid=e36ccb31-2d25-412c-981d-872687058113)
+	openEHR-EHR-ADMIN_ENTRY.role_profile.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-17">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"1672056675fc7e708f86ac6a37ffbcca">
+		["build_uid"] = <"2c9ac6da-ac07-380b-ae5d-559ec13322d6">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- role_profile
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0002] occurrences matches {0..1} matches {    -- org_context
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation_context\.v0/}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- role_id
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- organisation_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- role_type
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- primary_domain
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- role_name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- start
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- end
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- competency_profile_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"role_profile">
+					description = <"role_profile">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"org_context">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"role_id">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"organisation_ref">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"role_type">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"primary_domain">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"role_name">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"start">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"end">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"competency_profile_ref">
+					description = <"">
+				>
+			>
+		>
+	>
