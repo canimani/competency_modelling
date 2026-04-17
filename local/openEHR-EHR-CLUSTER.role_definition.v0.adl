@@ -1,0 +1,105 @@
+archetype (adl_version=1.4; uid=76ab2d38-e51c-4a40-9970-40b50a16f861)
+	openEHR-EHR-CLUSTER.role_definition.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-17">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"283f5d9329dd95ecf58de5c264aa77ce">
+		["build_uid"] = <"9635ab13-5a90-307e-b73f-e90bd98c883e">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- role_definition
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- role_definition_id
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- cannonical_title
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- role_type
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Simple
+							at0005]    -- Composite
+						}
+					}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- typical_duration_months
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"role_definition">
+					description = <"role_definition">
+				>
+				["at0001"] = <
+					text = <"role_definition_id">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"cannonical_title">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"role_type">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Simple">
+					description = <"single framework">
+				>
+				["at0005"] = <
+					text = <"Composite">
+					description = <"multiple frameworks e.g. CMIO role">
+				>
+				["at0006"] = <
+					text = <"typical_duration_months">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"description">
+					description = <"">
+				>
+			>
+		>
+	>
