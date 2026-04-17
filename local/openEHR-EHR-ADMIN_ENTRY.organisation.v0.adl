@@ -1,5 +1,5 @@
-archetype (adl_version=1.4; uid=5c816e15-0915-4661-9d1d-dbe6b0d9f04c)
-	openEHR-EHR-ADMIN_ENTRY.organisation.v0
+archetype (adl_version=1.4; uid=5e087622-fb3e-4bbb-9132-8f7b53cdaad4)
+	openEHR-EHR-CLUSTER.competency_base.v0
 
 concept
 	[at0000]
@@ -9,7 +9,7 @@ language
 
 description
 	original_author = <
-		["date"] = <"2026-04-06">
+		["date"] = <"2026-04-16">
 	>
 	lifecycle_state = <"unmanaged">
 	details = <
@@ -23,39 +23,41 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5e8cf416dc2d19e8877de96c95c4e404">
-		["build_uid"] = <"828b5e4c-a84a-312e-896e-b42c47c380bf">
+		["MD5-CAM-1.0.1"] = <"e6cdb40dae6740d61f197164f72a2649">
+		["build_uid"] = <"5ae7a5ec-e73e-3fc6-8527-d51c26a1bfe4">
 	>
 
 definition
-	ADMIN_ENTRY[at0000] matches {    -- Organisation
-		data matches {
-			ITEM_TREE[at0001] matches {    -- Item tree
-				items cardinality matches {0..*; unordered} matches {
-					allow_archetype CLUSTER[at0003] occurrences matches {0..1} matches {    -- organisation_holder
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
-					}
-					ELEMENT[at0004] matches {    -- valid_from
-						value matches {
-							DV_DATE matches {*}
-						}
-					}
-					ELEMENT[at0006] occurrences matches {0..1} matches {    -- valid_to
-						value matches {
-							DV_DATE_TIME matches {*}
-						}
-					}
-					ELEMENT[at0005] matches {    -- created_by
-						value matches {
-							DV_TEXT matches {*}
-						}
-					}
-					allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- organisation_context
-						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation_context\.v0/}
-					}
+	CLUSTER[at0000] matches {    -- competency_base
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- competency_name
+				value matches {
+					DV_TEXT matches {*}
 				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- comeptency_description
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- comeptency_level
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- date_assessed
+				value matches {
+					DV_DATE_TIME matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- status
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			allow_archetype CLUSTER[at0007] occurrences matches {0..1} matches {    -- competencyholder
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.clinical_non_sfia_competency\.v0|openEHR-EHR-CLUSTER\.other_non_sfia_competency\.v0|openEHR-EHR-CLUSTER\.sfia_competency-sfia_dh_competency\.v0|openEHR-EHR-CLUSTER\.sfia_competency-sfia_ict_competency\.v0/}
 			}
 		}
 	}
@@ -65,31 +67,31 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Organisation">
-					description = <"Organisation">
+					text = <"competency_base">
+					description = <"competency_base">
 				>
 				["at0001"] = <
-					text = <"Item tree">
-					description = <"@ internal @">
+					text = <"competency_name">
+					description = <"">
 				>
-				["at0003"] = <
-					text = <"organisation_holder">
+				["at0002"] = <
+					text = <"comeptency_description">
 					description = <"">
 				>
 				["at0004"] = <
-					text = <"valid_from">
+					text = <"comeptency_level">
 					description = <"">
 				>
 				["at0005"] = <
-					text = <"created_by">
+					text = <"date_assessed">
 					description = <"">
 				>
 				["at0006"] = <
-					text = <"valid_to">
+					text = <"status">
 					description = <"">
 				>
-				["at0008"] = <
-					text = <"organisation_context">
+				["at0007"] = <
+					text = <"competencyholder">
 					description = <"">
 				>
 			>
