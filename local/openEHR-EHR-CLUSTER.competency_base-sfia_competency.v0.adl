@@ -25,7 +25,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9bd6c6269fedb558028c4a731ca2d3d7">
+		["MD5-CAM-1.0.1"] = <"3d704cd868edc6be7f28629bc307dc41">
 		["build_uid"] = <"5ae7a5ec-e73e-3fc6-8527-d51c26a1bfe4">
 	>
 
@@ -62,22 +62,12 @@ definition
 					DV_IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[at0.4] occurrences matches {0..1} matches {    -- dh_domain
-				value matches {
-					DV_TEXT matches {*}
-				}
-			}
 			ELEMENT[at0.5] occurrences matches {0..1} matches {    -- current_level
 				value matches {
 					DV_ORDINAL matches {*}
 				}
 			}
 			ELEMENT[at0.6] occurrences matches {0..1} matches {    -- target_level
-				value matches {
-					DV_ORDINAL matches {*}
-				}
-			}
-			ELEMENT[at0.7] occurrences matches {0..1} matches {    -- capability_tier
 				value matches {
 					DV_ORDINAL matches {*}
 				}
@@ -117,20 +107,12 @@ ontology
 					text = <"sfia_code">
 					description = <"">
 				>
-				["at0.4"] = <
-					text = <"dh_domain">
-					description = <"">
-				>
 				["at0.5"] = <
 					text = <"current_level">
 					description = <"">
 				>
 				["at0.6"] = <
 					text = <"target_level">
-					description = <"">
-				>
-				["at0.7"] = <
-					text = <"capability_tier">
 					description = <"">
 				>
 			>
