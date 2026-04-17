@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"55041c383b2499ce6e3c7bfb4601b25a">
+		["MD5-CAM-1.0.1"] = <"6969ec61a61c48ef098a99f5dc3f2e9f">
 		["build_uid"] = <"f5697aa2-5662-38cc-8c0d-24cb2c74409c">
 	>
 
@@ -55,6 +55,13 @@ definition
 					ELEMENT[at0014] occurrences matches {0..1} matches {    -- assessment_date
 						value matches {
 							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- assessor_ref
+						value matches {
+							DV_IDENTIFIER matches {
+								type matches {/PARTY_REF/}
+							}
 						}
 					}
 					allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- sfia_ict_competencies
@@ -131,6 +138,10 @@ ontology
 				>
 				["at0014"] = <
 					text = <"assessment_date">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"assessor_ref">
 					description = <"">
 				>
 			>
