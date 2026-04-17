@@ -23,12 +23,12 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"e6cdb40dae6740d61f197164f72a2649">
+		["MD5-CAM-1.0.1"] = <"912a0a1b2fc20b7b4e10cb394c319a8c">
 		["build_uid"] = <"5ae7a5ec-e73e-3fc6-8527-d51c26a1bfe4">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- competency_base
+	CLUSTER[at0000] matches {    -- competency_base1
 		items cardinality matches {1..*; unordered} matches {
 			ELEMENT[at0001] occurrences matches {0..1} matches {    -- competency_name
 				value matches {
@@ -67,7 +67,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"competency_base">
+					text = <"competency_base1">
 					description = <"competency_base">
 				>
 				["at0001"] = <
