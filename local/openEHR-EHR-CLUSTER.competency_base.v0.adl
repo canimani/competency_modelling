@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a8fb20eb872aeec466c61718f639d455">
+		["MD5-CAM-1.0.1"] = <"bdfc923db2599b138322883c8be7fb4e">
 		["build_uid"] = <"5ae7a5ec-e73e-3fc6-8527-d51c26a1bfe4">
 	>
 
@@ -33,6 +33,20 @@ definition
 			ELEMENT[at0008] occurrences matches {0..1} matches {    -- skill
 				value matches {
 					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- terminology
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0012,    -- SFIA v9
+							at0013]    -- GMC Standards
+						}
+					}
 				}
 			}
 			ELEMENT[at0004] occurrences matches {0..1} matches {    -- assessed_on
@@ -66,6 +80,18 @@ ontology
 				>
 				["at0008"] = <
 					text = <"skill">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"terminology">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"SFIA v9">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"GMC Standards">
 					description = <"">
 				>
 			>
