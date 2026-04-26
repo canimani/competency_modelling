@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3d0c814bf7d916966491e100b88b1911">
+		["MD5-CAM-1.0.1"] = <"79367c5ed6470fabec863eea1f4e17b6">
 		["build_uid"] = <"5582c43a-c09a-39e4-8cd0-7fc382c2763f">
 	>
 
@@ -33,6 +33,66 @@ definition
 			ELEMENT[at0001] matches {    -- requirement_type
 				value matches {
 					DV_COUNT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0007,    -- qualification
+							at0008,    -- registration
+							at0009,    -- external_role_ref
+							at0010]    -- competency_threshold
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] matches {    -- rational
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- ref_pathway_ref
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- ref_role_definition_ref
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0005] occurrences matches {0..1} matches {    -- min_duration_month
+				value matches {
+					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0006] occurrences matches {0..1} matches {    -- concurrent_or_prior
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {    -- framework
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0014,    -- Non-SFIA framework code
+							at0015,    -- CMC Standard
+							at0016,    -- GPhC
+							at0017]    -- RCN
+						}
+					}
+				}
+			}
+			ELEMENT[at0018] occurrences matches {0..1} matches {    -- competency_code
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {*}
 				}
 			}
 		}
@@ -48,6 +108,66 @@ ontology
 				>
 				["at0001"] = <
 					text = <"requirement_type">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"rational">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"ref_pathway_ref">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"ref_role_definition_ref">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"min_duration_month">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"concurrent_or_prior">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"qualification">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"registration">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"external_role_ref">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"competency_threshold">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"framework">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Non-SFIA framework code">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"CMC Standard">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"GPhC">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"RCN">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"competency_code">
 					description = <"">
 				>
 			>
