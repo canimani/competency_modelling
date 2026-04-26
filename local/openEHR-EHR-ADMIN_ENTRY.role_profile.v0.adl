@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"22416950be6ec10ddfe9156bc0963eac">
+		["MD5-CAM-1.0.1"] = <"4fc4260a5ba26e5894bbede9d1c3ad22">
 		["build_uid"] = <"2c9ac6da-ac07-380b-ae5d-559ec13322d6">
 	>
 
@@ -74,6 +74,16 @@ definition
 					ELEMENT[at0010] occurrences matches {0..1} matches {    -- competency_profile_ref
 						value matches {
 							DV_EHR_URI matches {*}
+						}
+					}
+					ELEMENT[at0011] matches {    -- person_ehr_ref
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+					ELEMENT[at0012] matches {    -- universal_role_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
 						}
 					}
 				}
@@ -127,6 +137,14 @@ ontology
 				>
 				["at0010"] = <
 					text = <"competency_profile_ref">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"person_ehr_ref">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"universal_role_ref">
 					description = <"">
 				>
 			>
