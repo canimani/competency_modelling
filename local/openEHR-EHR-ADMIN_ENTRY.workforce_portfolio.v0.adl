@@ -1,0 +1,117 @@
+archetype (adl_version=1.4; uid=36af52a9-6836-4c25-b8e1-6f334dde6ec0)
+	openEHR-EHR-ADMIN_ENTRY.workforce_portfolio.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-26">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"f2c9e692c69a5784cde64f5d38c483c2">
+		["build_uid"] = <"bdb75a5d-72b1-390a-be3f-68bfe0d63fc5">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- workforce_portfolio
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- portfolio_name
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] matches {    -- time_commited
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..*} matches {    -- ecosystem_refs
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..*} matches {    -- role_profile_refs
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- person_competency_record_ref
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..*} matches {    -- pathway_enrollment_refs
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..*} matches {    -- career_pathway_refs
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"workforce_portfolio">
+					description = <"workforce_portfolio">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"portfolio_name">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"time_commited">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"ecosystem_refs">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"role_profile_refs">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"person_competency_record_ref">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"pathway_enrollment_refs">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"career_pathway_refs">
+					description = <"">
+				>
+			>
+		>
+	>
