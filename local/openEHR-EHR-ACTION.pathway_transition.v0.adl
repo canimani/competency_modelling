@@ -1,0 +1,178 @@
+archetype (adl_version=1.4; uid=0f8d7a5f-9240-4482-ad97-dbd7bfbc97a7)
+	openEHR-EHR-ACTION.pathway_transition.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-26">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"7cf706242d4aa55f557bfa6d16ce038d">
+		["build_uid"] = <"bdfe402c-830f-3f77-97db-169af7f8b5c0">
+	>
+
+definition
+	ACTION[at0000] matches {    -- pathway_transition
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0003] matches {    -- enrollment_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0004] matches {    -- from_step_order
+						value matches {
+							DV_PROPORTION matches {*}
+						}
+					}
+					ELEMENT[at0005] matches {    -- to_step_order
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0006] matches {    -- transition_type
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- matched_rule_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- from_role_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- to_role_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0010] matches {    -- proposed_date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0011] matches {    -- gate_condition_met
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- gate_check_date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- gate_failure_reason
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- enacted_date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- approver_ref
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0002] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"pathway_transition">
+					description = <"pathway_transition">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"enrollment_ref">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"from_step_order">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"to_step_order">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"transition_type">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"matched_rule_ref">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"from_role_ref">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"to_role_ref">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"proposed_date">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"gate_condition_met">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"gate_check_date">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"gate_failure_reason">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"enacted_date">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"approver_ref">
+					description = <"">
+				>
+			>
+		>
+	>
