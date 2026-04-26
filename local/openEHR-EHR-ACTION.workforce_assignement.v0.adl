@@ -1,0 +1,158 @@
+archetype (adl_version=1.4; uid=6eb6ee3d-9e11-4d5d-9ec5-1f49917aa3ae)
+	openEHR-EHR-ACTION.workforce_assignement.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-26">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"f1fec7183a67732b064042d1a7e338c6">
+		["build_uid"] = <"08ab3bcf-4eca-3b49-816d-dc06e0e9223e">
+	>
+
+definition
+	ACTION[at0000] matches {    -- workforce_assignement
+		description matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- assignment_id
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- person_ehr_ref
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+					ELEMENT[at0004] matches {    -- organisation_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- organisation_group_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- role_profile_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- universal_role_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- ecosystem_role_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- assignment_start
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- assignement_end
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- destination_organisation_ref
+						value matches {
+							DV_EHR_URI matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0005] matches {*}    -- Item tree
+		}
+		other_participations cardinality matches {0..*; unordered} matches {
+			PARTICIPATION[at0014] occurrences matches {0..1} matches {*}    -- PARTICIPATION
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"workforce_assignement">
+					description = <"workforce_assignement">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"assignment_id">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"person_ehr_ref">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"organisation_ref">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0006"] = <
+					text = <"organisation_group_ref">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"role_profile_ref">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"universal_role_ref">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"ecosystem_role_ref">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"assignment_start">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"assignement_end">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"destination_organisation_ref">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"PARTICIPATION">
+					description = <"">
+				>
+			>
+		>
+	>
