@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"bdfc923db2599b138322883c8be7fb4e">
+		["MD5-CAM-1.0.1"] = <"59a8fdf6a33be367e6aa7136a9118149">
 		["build_uid"] = <"5ae7a5ec-e73e-3fc6-8527-d51c26a1bfe4">
 	>
 
@@ -45,6 +45,27 @@ definition
 							[local::
 							at0012,    -- SFIA v9
 							at0013]    -- GMC Standards
+						}
+					}
+				}
+			}
+			ELEMENT[at0014] occurrences matches {0..1} matches {    -- terminology_version
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {    -- method
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0016,    -- self-assessment
+							at0017,    -- peer-review
+							at0018,    -- panel
+							at0019]    -- examination
 						}
 					}
 				}
@@ -92,6 +113,30 @@ ontology
 				>
 				["at0013"] = <
 					text = <"GMC Standards">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"terminology_version">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"method">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"self-assessment">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"peer-review">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"panel">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"examination">
 					description = <"">
 				>
 			>
