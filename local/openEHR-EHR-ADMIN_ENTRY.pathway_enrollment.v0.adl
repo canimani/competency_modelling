@@ -1,0 +1,167 @@
+archetype (adl_version=1.4; uid=59aa4058-a7e1-4376-956d-1d1535407fca)
+	openEHR-EHR-ADMIN_ENTRY.pathway_enrollment.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-26">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"d4bf4bed9ddf0cff9db6ceeef6565ada">
+		["build_uid"] = <"070ed001-d544-3ffa-9608-1167d5904194">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- pathway_enrollment
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- enrollment_id
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- pathway_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- enrollment_date
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- current_step_order
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0006] matches {    -- status
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+						name matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0007,    -- active
+									at0008,    -- compeleted
+									at0009,    -- withdrawn
+									at0010,    -- paused
+									at0011]    -- exited_diagonal
+								}
+							}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- source_pathway_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- source_role_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- entry_step_order
+						value matches {
+							DV_COUNT matches {*}
+						}
+					}
+					ELEMENT[at0015] matches {    -- entry_rule_matched_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"pathway_enrollment">
+					description = <"pathway_enrollment">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"enrollment_id">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"pathway_ref">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"enrollment_date">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"current_step_order">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"status">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"active">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"compeleted">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"withdrawn">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"paused">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"exited_diagonal">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"source_pathway_ref">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"source_role_ref">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"entry_step_order">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"entry_rule_matched_ref">
+					description = <"">
+				>
+			>
+		>
+	>
