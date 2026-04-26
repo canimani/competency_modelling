@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"283f5d9329dd95ecf58de5c264aa77ce">
+		["MD5-CAM-1.0.1"] = <"d09f75420983bc60a79577300c182b1a">
 		["build_uid"] = <"9635ab13-5a90-307e-b73f-e90bd98c883e">
 	>
 
@@ -60,6 +60,26 @@ definition
 				value matches {
 					DV_TEXT matches {*}
 				}
+			}
+			allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- occupational_classification
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.occupational_classification\.v0/}
+			}
+			allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- disciplinary_classification
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.disciplinary_classification\.v0/}
+			}
+			allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {    -- generic_skills_classification
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.generic_skills_classification\.v0/}
+			}
+			allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- digital_health_skills_classification
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.digital_health_skills_classification\.v0/}
+			}
+			allow_archetype CLUSTER[at0012] occurrences matches {0..*} matches {    -- organisation_role_mappings
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation_role_mapping\.v0/}
 			}
 		}
 	}
@@ -98,6 +118,26 @@ ontology
 				>
 				["at0007"] = <
 					text = <"description">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"occupational_classification">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"disciplinary_classification">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"generic_skills_classification">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"digital_health_skills_classification">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"organisation_role_mappings">
 					description = <"">
 				>
 			>
