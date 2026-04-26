@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d2dbfad0fba704d0b3f4eeb59ef3dfa4">
+		["MD5-CAM-1.0.1"] = <"d9ae4534d0948e2dc361753bcf787c11">
 		["build_uid"] = <"545d4d07-5699-374c-ad87-da92332c11e7">
 	>
 
@@ -49,9 +49,15 @@ definition
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
 			}
-			allow_archetype CLUSTER[at0006] occurrences matches {0..*} matches {    -- orgnisation_group_context
-				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation_context\.v0/}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- group_coordinator
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- description
+				value matches {
+					DV_TEXT matches {*}
+				}
 			}
 		}
 	}
@@ -80,8 +86,12 @@ ontology
 					text = <"member_orgnisations">
 					description = <"">
 				>
-				["at0006"] = <
-					text = <"orgnisation_group_context">
+				["at0007"] = <
+					text = <"group_coordinator">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"description">
 					description = <"">
 				>
 			>
