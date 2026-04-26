@@ -1,0 +1,88 @@
+archetype (adl_version=1.4; uid=85807304-4dbb-4a01-aff9-bd5139f61c00)
+	openEHR-EHR-ADMIN_ENTRY.organisation.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-26">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"e3e82da4b499d42fc2ba106120e13372">
+		["build_uid"] = <"828b5e4c-a84a-312e-896e-b42c47c380bf">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Organisation
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0002] occurrences matches {0..1} matches {    -- organisation_holder
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation\.v1/}
+					}
+					allow_archetype CLUSTER[at0003] occurrences matches {0..1} matches {    -- organisation_context
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation_context\.v0/}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- valid_from
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- valid_to
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Organisation">
+					description = <"Organisation">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"organisation_holder">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"organisation_context">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"valid_from">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"valid_to">
+					description = <"">
+				>
+			>
+		>
+	>
