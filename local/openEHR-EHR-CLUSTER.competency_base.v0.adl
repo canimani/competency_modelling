@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"59a8fdf6a33be367e6aa7136a9118149">
+		["MD5-CAM-1.0.1"] = <"bdc7c9088e4d0fccecf7a9174196e9b5">
 		["build_uid"] = <"5ae7a5ec-e73e-3fc6-8527-d51c26a1bfe4">
 	>
 
@@ -70,14 +70,30 @@ definition
 					}
 				}
 			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- overall_assessment
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0021,    -- met
+							at0022,    -- partially-met
+							at0023,    -- not-met
+							at0024]    -- not-assessed
+						}
+					}
+				}
+			}
+			ELEMENT[at0026] occurrences matches {0..1} matches {    -- assessed_by
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
 			ELEMENT[at0004] occurrences matches {0..1} matches {    -- assessed_on
 				value matches {
 					DV_DATE_TIME matches {*}
-				}
-			}
-			ELEMENT[at0005] occurrences matches {0..1} matches {    -- status
-				value matches {
-					DV_CODED_TEXT matches {*}
 				}
 			}
 		}
@@ -93,10 +109,6 @@ ontology
 				>
 				["at0004"] = <
 					text = <"assessed_on">
-					description = <"">
-				>
-				["at0005"] = <
-					text = <"status">
 					description = <"">
 				>
 				["at0008"] = <
@@ -137,6 +149,30 @@ ontology
 				>
 				["at0019"] = <
 					text = <"examination">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"overall_assessment">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"met">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"partially-met">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"not-met">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"not-assessed">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"assessed_by">
 					description = <"">
 				>
 			>
