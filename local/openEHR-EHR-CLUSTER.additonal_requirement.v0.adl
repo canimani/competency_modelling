@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"79367c5ed6470fabec863eea1f4e17b6">
+		["MD5-CAM-1.0.1"] = <"331fd094e6470ec1cbdcb96fc545892c">
 		["build_uid"] = <"5582c43a-c09a-39e4-8cd0-7fc382c2763f">
 	>
 
@@ -93,6 +93,16 @@ definition
 				}
 				name matches {
 					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0019] occurrences matches {0..1} matches {    -- qualification_name
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- awarding_body
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 		}
@@ -168,6 +178,14 @@ ontology
 				>
 				["at0018"] = <
 					text = <"competency_code">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"qualification_name">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"awarding_body">
 					description = <"">
 				>
 			>
