@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4fc4260a5ba26e5894bbede9d1c3ad22">
+		["MD5-CAM-1.0.1"] = <"55756b10e3ae6c66732a69ebf9654c74">
 		["build_uid"] = <"2c9ac6da-ac07-380b-ae5d-559ec13322d6">
 	>
 
@@ -82,6 +82,11 @@ definition
 						}
 					}
 					ELEMENT[at0012] matches {    -- universal_role_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- ecosystem_role_ref
 						value matches {
 							DV_IDENTIFIER matches {*}
 						}
@@ -145,6 +150,10 @@ ontology
 				>
 				["at0012"] = <
 					text = <"universal_role_ref">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"ecosystem_role_ref">
 					description = <"">
 				>
 			>
