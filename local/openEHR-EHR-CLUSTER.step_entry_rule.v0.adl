@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f4c8bb1dff61b26652805fc3e13ca53f">
+		["MD5-CAM-1.0.1"] = <"701f74e4e36c17da6abe1ef119d4af4d">
 		["build_uid"] = <"c1f418ff-afdf-31cd-b4b4-1cb8077325de">
 	>
 
@@ -66,9 +66,11 @@ definition
 			}
 			allow_archetype CLUSTER[at0010] matches {    -- base_gate
 				include
-					archetype_id/value matches {/.*/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.transisiton_gate\.v0/}
 			}
-			allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- CLUSTER_SLOT
+			allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- additional_requirements
+				include
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.additonal_requirement\.v0/}
 			}
 		}
 	}
@@ -118,7 +120,7 @@ ontology
 					description = <"">
 				>
 				["at0011"] = <
-					text = <"CLUSTER_SLOT">
+					text = <"additional_requirements">
 					description = <"">
 				>
 			>
