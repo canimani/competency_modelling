@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"fa2e4a15c1471a8c543c8bebd35faf21">
+		["MD5-CAM-1.0.1"] = <"13fb72cc0d4d4361af7311841f93c7a1">
 		["build_uid"] = <"c1f418ff-afdf-31cd-b4b4-1cb8077325de">
 	>
 
@@ -35,7 +35,12 @@ definition
 					DV_IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[at0002] occurrences matches {0..1} matches {    -- source_role_definition
+			ELEMENT[at0012] matches {    -- rule_label
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] matches {    -- source_role_definition_ref
 				value matches {
 					DV_IDENTIFIER matches {*}
 				}
@@ -64,9 +69,9 @@ definition
 				include
 					archetype_id/value matches {/openEHR-EHR-CLUSTER\.competency_group_gate\.v0/}
 			}
-			allow_archetype CLUSTER[at0010] matches {    -- base_gate
+			allow_archetype CLUSTER[at0010] matches {    -- tranistion_gate
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.competency_base\.v0/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.transisiton_gate\.v0/}
 			}
 			allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- additional_requirements
 				include
@@ -88,7 +93,7 @@ ontology
 					description = <"">
 				>
 				["at0002"] = <
-					text = <"source_role_definition">
+					text = <"source_role_definition_ref">
 					description = <"">
 				>
 				["at0003"] = <
@@ -116,11 +121,15 @@ ontology
 					description = <"">
 				>
 				["at0010"] = <
-					text = <"base_gate">
+					text = <"tranistion_gate">
 					description = <"">
 				>
 				["at0011"] = <
 					text = <"additional_requirements">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"rule_label">
 					description = <"">
 				>
 			>
