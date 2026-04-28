@@ -21,8 +21,8 @@
       "custodian_namespace" : "",
       "sem_ver" : "0.1.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "969666e3b38a1752007c16475a9a2632",
-      "PARENT:MD5-CAM-1.0.1" : "1a444e87c95025a44f9ca752bcdb9f96"
+      "MD5-CAM-1.0.1" : "9230803b2a14d24c26d8f0b9c36c6c6c",
+      "PARENT:MD5-CAM-1.0.1" : "eadbcc17a126174992f16a5d5b6840c6"
     },
     "details" : {
       "en" : {
@@ -157,7 +157,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "25c652bdcd24c91d5147cc77d4b97956"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.occupational_classification.v0",
     "differential" : true,
@@ -208,7 +221,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "355aed6febb9736a26035e681675b7ac"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.disciplinary_classification.v0",
     "differential" : true,
@@ -259,7 +285,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "e62925281fb7a3582add4e5fa03951a7"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.generic_skills_classification.v0",
     "differential" : true,
@@ -310,7 +349,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ed23d77778b950f9af7f77a302a4d318"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.digital_health_skills_classification.v0",
     "differential" : true,
@@ -361,7 +413,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "b59fb5f4f0678f60a558493073cd9ae0"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_role_mapping.v0",
     "differential" : true,
@@ -412,7 +477,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "bdc7c9088e4d0fccecf7a9174196e9b5"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.competency_base.v0",
     "differential" : true,
