@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"de68df2a86272e1d891dc145c5be25f2">
+		["MD5-CAM-1.0.1"] = <"374045b7a7bcc08f27bfbefebe700f1e">
 		["build_uid"] = <"4817ae5f-331b-379c-9237-dbe978512a3c">
 	>
 
@@ -53,6 +53,11 @@ definition
 			ELEMENT[at0008] occurrences matches {0..1} matches {    -- requires_clinical_approval
 				value matches {
 					DV_BOOLEAN matches {*}
+				}
+			}
+			ELEMENT[at0013] matches {    -- gate_rationale
+				value matches {
+					DV_TEXT matches {*}
 				}
 			}
 			ELEMENT[at0009] occurrences matches {0..1} matches {    -- required_overall_assessment
@@ -137,6 +142,10 @@ ontology
 				>
 				["at0011"] = <
 					text = <"partially_met">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"gate_rationale">
 					description = <"">
 				>
 			>
