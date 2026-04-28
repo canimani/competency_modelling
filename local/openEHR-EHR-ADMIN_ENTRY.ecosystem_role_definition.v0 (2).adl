@@ -1,0 +1,142 @@
+archetype (adl_version=1.4; uid=bfa79463-aff6-491a-a228-e20b56d64a3a)
+	openEHR-EHR-ADMIN_ENTRY.ecosystem_role_definition.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2026-04-28">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"dc24f496ac9bb76a86220e0a35357c75">
+		["build_uid"] = <"844e9fef-eee8-3f1a-8eb4-3c21ea24d721">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- ecosystem_role_definition
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] matches {    -- ecosystem_role_defintion_id
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0003] matches {    -- universal_role_defintion_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- ecosystem_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- local_title
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- min_level_override
+						value matches {
+							DV_ORDINAL matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- additonal_competency_requirements
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.competency_base\.v0/}
+					}
+					allow_archetype CLUSTER[at0009] occurrences matches {0..*} matches {    -- organisation_role_mapping
+						include
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation_role_mapping\.v0/}
+					}
+					ELEMENT[at0011] matches {    -- valid_from
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- valid_to
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- rationale
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"ecosystem_role_definition">
+					description = <"ecosystem_role_definition">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"ecosystem_role_defintion_id">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"universal_role_defintion_ref">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"ecosystem_ref">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"local_title">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"min_level_override">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"additonal_competency_requirements">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"organisation_role_mapping">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"valid_from">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"valid_to">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"rationale">
+					description = <"">
+				>
+			>
+		>
+	>
