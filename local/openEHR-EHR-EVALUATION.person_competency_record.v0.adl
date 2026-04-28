@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d54521fc149ef1f43eb064a31474f18a">
+		["MD5-CAM-1.0.1"] = <"7ddc05f8c7f40d14ec9de9819b9d0242">
 		["build_uid"] = <"f6435f72-8f15-3594-a415-50f392530e6a">
 	>
 
@@ -32,6 +32,21 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0015] matches {    -- person_competency_record_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- ehr_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0017] occurrences matches {0..*} matches {    -- contributing_profiles
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
 					allow_archetype CLUSTER[at0002] occurrences matches {0..*} matches {    -- sfia_ict_competencies
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.sfia_competency-sfia_ict_competency\.v0/}
@@ -135,6 +150,18 @@ ontology
 				>
 				["at0014"] = <
 					text = <"PARTY_PROXY">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"person_competency_record_ref">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"ehr_ref">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"contributing_profiles">
 					description = <"">
 				>
 			>
