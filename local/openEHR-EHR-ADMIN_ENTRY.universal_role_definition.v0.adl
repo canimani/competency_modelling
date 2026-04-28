@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"eadbcc17a126174992f16a5d5b6840c6">
+		["MD5-CAM-1.0.1"] = <"54a45437a3191f3515fd06e71d4b792e">
 		["build_uid"] = <"9df9b795-2634-3ec8-8b5f-530ea229705f">
 	>
 
@@ -45,6 +45,15 @@ definition
 					ELEMENT[at0004] matches {    -- role_type
 						value matches {
 							DV_CODED_TEXT matches {*}
+						}
+						name matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0014,    -- local role
+									at0015]    -- terminology
+								}
+							}
 						}
 					}
 					ELEMENT[at0005] matches {    -- issuing_authority
@@ -150,6 +159,14 @@ ontology
 				["at0013"] = <
 					text = <"digital_health_skills_classifications">
 					description = <"">
+				>
+				["at0014"] = <
+					text = <"local role">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"terminology">
+					description = <"e.g. SFIA constraned by issuer DV_IDNETIFIER">
 				>
 			>
 		>
