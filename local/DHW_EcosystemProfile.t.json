@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "3.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "43c792f0ad5a1265c8d07c4c8b5c8135",
+      "MD5-CAM-1.0.1" : "6a474ba77932ea68c0723998f51c39e6",
       "PARENT:MD5-CAM-1.0.1" : "e62411d4a4835ede656559c633ba0a32"
     },
     "details" : {
@@ -64,16 +64,7 @@
             "rmTypeName" : "ELEMENT",
             "occurrences" : "1..1",
             "nodeId" : "at0003.1",
-            "attributes" : [ {
-              "@type" : "C_ATTRIBUTE",
-              "rmAttributeName" : "value",
-              "children" : [ {
-                "@type" : "C_COMPLEX_OBJECT",
-                "rmTypeName" : "DV_DATE",
-                "attributes" : [ ],
-                "attributeTuples" : [ ]
-              } ]
-            } ],
+            "attributes" : [ ],
             "attributeTuples" : [ ]
           }, {
             "@type" : "C_ARCHETYPE_ROOT",
@@ -214,7 +205,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6a480575b55a8f027e0ee9aa611f5b18"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen zur einer Organisation, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden.",
+          "keywords" : [ "Organisation, Anbieter, Versorger, Betreuer, Netzwerk, Verbund, Gruppe" ],
+          "use" : "Der Archetyp wird verwendet, um Informationen zur einer Organisation darzustellen, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden, oft ad hoc oder wenn die Verwendung von einem formellen demografischen Register oder einem Index nicht angemessen oder nicht möglich ist.\nBeispiele beinhalten:\n- der Inhaber einer Patientenverfügung unter Verwendung des SLOT „Inhaber der Kopie“ innerhalb des Archetyps EVALUATION.advance_care_directive oder\n- Name und Kontaktdaten einer Organisation, die die Betreuung einer Person in ihrem zu Hause übernimmt.\n\nDieser Archetyp wurde entwickelt, um Angaben zu offiziell anerkannten Einrichtungen, wie einem eingetragenen Unternehmen, einem Krankenhaus und seinen anerkannten „Unterorganisationen“, wie einer operativ getrennten oder spezialisierten Satellitenklinik oder einem häuslichen Pflegedienst, zu enthalten. Es kann auch verwendet werden, um Kontaktinformationen über informellere Netzwerke oder Gruppen darzustellen, wie z. B. eine lokale Selbsthilfegruppe.\n\nDieser Archetyp könnte auch als Proxy für formale demografische Daten verwendet werden, wenn ein Template mit Domänenexperten überprüft wird – beispielsweise bei einer Bewertung, bei der die Prüfer erwarten würden, dass die Details zu der Organisation oben auf dem Bewertungsformular angezeigt werden.",
+          "misuse" : "Der Archetyp darf nicht verwendet werden, um ein offizielles Register oder einen Index darzustellen, zu ersetzen oder zu führen. Verwenden Sie zu diesem Zweck einen formellen Gesundheitsanbieter-Index (Health Provider Index) oder Archetypen, die auf dem openEHR Demographic Information Model basieren.\n\nDer Archetyp darf nicht verwendet werden, um den Pflegeort und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Reference Model-Attribute dargestellt werden sollten.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om en organisation på det sätt som det ska representeras i en journalanteckning.\n",
+          "keywords" : [ "organisation, vårdföretag, leverantör, vårdgivare, vårdenhet, enhet, avdelning, nätverk, grupp" ],
+          "use" : "Används för att registrera information om en organisation på det sätt som är etablerat och gör den begriplig i den kliniska dokumentationen. Ofta sker detta som en lösning när det inte är lämpligt eller möjligt att använda ett formellt demografiskt register eller index. \n\nExempel på detta omfattar: \n- rättighetsinnehavaren av ett vårdsystem för avancerat sjukvård och som utnyttjar den SLOT för Copyholder som finns i inbäddad i arketypen EVALUATION.advance_care_directive\n- namn och kontaktuppgifter som kan behövas vid hemsjukvård.\n\nAnvänds för att dokumentera information om etablerade enheter som vårdföretag eller sjukhus med organisatoriskt underliggande enheter som även har utlokaliserade enheter eller som bedriver hemsjukvård.\nArketypen kan även användas för dokumentation om mer informella nätverk och grupper, som samhällsorganiserade lokala stödgrupper. \n\nAnvänds även för att ersätta en mer formellt genererad demografisk data, när exempelvis domänexperter granskar en mall, där granskare förväntar sig att se information om en organisation i ett formulär.\n",
+          "misuse" : "Ska inte användas för att ersätta eller underhålla ett officiellt register eller index. Då skall istället arketyper baserat på openEHRs demografiska informationsmodell användas.\n\nSka inte användas för beskrivning av platsen där vården utförs eller liknande datafält. Det formellt korrekta tillvägagångssättet är istället att använda attribut från Referensmodellen vid dokumentationen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet.",
+          "keywords" : [ "organisasjon, leverandør, omsorgsperson, nettverk, gruppe" ],
+          "use" : "Brukes for å registrere detaljer om en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet, ofte ad hoc eller i de tilfeller når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.\n\nFor eksempel:\n- kopiinnhaver av av et fremtidig behandlingsvalg ved å bruke \"Kopiholder\"-SLOTet i arketypen \"EVALUATION.advance_care_directive\" (Fremtidig behandlingsvalg).\n- navn og kontaktdetaljer for en organisasjon som yter hjemmehjelp til en enkeltperson.\n\nDenne arketypen er utformet for å registrere detaljer om formelt anerkjente enheter, for eksempel en registrert virksomhet, et sykehus og dets \"underorganisasjoner\", en operativt separat eller spesialisert satellittklinikk eller hjemmetjeneste. Den kan også brukes til å registrere kontaktinformasjon om mer uformelle nettverk eller grupper, for eksempel en lokal støttegruppe.\n\nDenne arketypen kan også brukes som en midlertidig erstatning for formelle demografiske data når man gjennomgår et templat med domeneeksperter - for eksempel en vurdering der man i templatet forventer å se detaljer om en organisasjon i et vurderingsskjema.",
+          "misuse" : "Brukes ikke til å representere, erstatte eller vedlikeholde formelle demografiske opplysninger. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\n\nBrukes ikke for å representere behandlingssted eller lignende dataelementer, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about an organisation as they are known or understood in the course of clinical documentation.",
+          "keywords" : [ "organisation, organization, provider, carer, network, group" ],
+          "use" : "Use to record details of an organisation as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype; or\n- the name and contact details of an organisation providing home care to an individual.\n\nThis archetype has been designed to carry details of formally recognised entities, such as a registered business, a hospital and its recognised 'sub-organisations', such as an operationally separate or specialised satellite clinic or home care service. It may also be used to carry contact information about more informal networks or groups, such as a local community support group.\n\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see an organisations' details on an assessment form.",
+          "misuse" : "Not to be used to represent, replace or maintain an official register or index. Use a formal Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\n\nNot to be used to represent the location of care and similar data elements that should be represented formally in the health record using the Reference Model attributes.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation.v1",
     "differential" : true,
@@ -363,7 +416,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "10fb4eaffebc8c3ce3ac2b72ae84a9c7"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_context.v0",
     "differential" : true,
@@ -412,9 +478,22 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "d9ae4534d0948e2dc361753bcf787c11"
+        "PARENT:MD5-CAM-1.0.1" : "348ce3feb015b66a8468ae070d36f9a0"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_group.v0",
     "differential" : true,
@@ -497,7 +576,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6a480575b55a8f027e0ee9aa611f5b18"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen zur einer Organisation, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden.",
+          "keywords" : [ "Organisation, Anbieter, Versorger, Betreuer, Netzwerk, Verbund, Gruppe" ],
+          "use" : "Der Archetyp wird verwendet, um Informationen zur einer Organisation darzustellen, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden, oft ad hoc oder wenn die Verwendung von einem formellen demografischen Register oder einem Index nicht angemessen oder nicht möglich ist.\nBeispiele beinhalten:\n- der Inhaber einer Patientenverfügung unter Verwendung des SLOT „Inhaber der Kopie“ innerhalb des Archetyps EVALUATION.advance_care_directive oder\n- Name und Kontaktdaten einer Organisation, die die Betreuung einer Person in ihrem zu Hause übernimmt.\n\nDieser Archetyp wurde entwickelt, um Angaben zu offiziell anerkannten Einrichtungen, wie einem eingetragenen Unternehmen, einem Krankenhaus und seinen anerkannten „Unterorganisationen“, wie einer operativ getrennten oder spezialisierten Satellitenklinik oder einem häuslichen Pflegedienst, zu enthalten. Es kann auch verwendet werden, um Kontaktinformationen über informellere Netzwerke oder Gruppen darzustellen, wie z. B. eine lokale Selbsthilfegruppe.\n\nDieser Archetyp könnte auch als Proxy für formale demografische Daten verwendet werden, wenn ein Template mit Domänenexperten überprüft wird – beispielsweise bei einer Bewertung, bei der die Prüfer erwarten würden, dass die Details zu der Organisation oben auf dem Bewertungsformular angezeigt werden.",
+          "misuse" : "Der Archetyp darf nicht verwendet werden, um ein offizielles Register oder einen Index darzustellen, zu ersetzen oder zu führen. Verwenden Sie zu diesem Zweck einen formellen Gesundheitsanbieter-Index (Health Provider Index) oder Archetypen, die auf dem openEHR Demographic Information Model basieren.\n\nDer Archetyp darf nicht verwendet werden, um den Pflegeort und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Reference Model-Attribute dargestellt werden sollten.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om en organisation på det sätt som det ska representeras i en journalanteckning.\n",
+          "keywords" : [ "organisation, vårdföretag, leverantör, vårdgivare, vårdenhet, enhet, avdelning, nätverk, grupp" ],
+          "use" : "Används för att registrera information om en organisation på det sätt som är etablerat och gör den begriplig i den kliniska dokumentationen. Ofta sker detta som en lösning när det inte är lämpligt eller möjligt att använda ett formellt demografiskt register eller index. \n\nExempel på detta omfattar: \n- rättighetsinnehavaren av ett vårdsystem för avancerat sjukvård och som utnyttjar den SLOT för Copyholder som finns i inbäddad i arketypen EVALUATION.advance_care_directive\n- namn och kontaktuppgifter som kan behövas vid hemsjukvård.\n\nAnvänds för att dokumentera information om etablerade enheter som vårdföretag eller sjukhus med organisatoriskt underliggande enheter som även har utlokaliserade enheter eller som bedriver hemsjukvård.\nArketypen kan även användas för dokumentation om mer informella nätverk och grupper, som samhällsorganiserade lokala stödgrupper. \n\nAnvänds även för att ersätta en mer formellt genererad demografisk data, när exempelvis domänexperter granskar en mall, där granskare förväntar sig att se information om en organisation i ett formulär.\n",
+          "misuse" : "Ska inte användas för att ersätta eller underhålla ett officiellt register eller index. Då skall istället arketyper baserat på openEHRs demografiska informationsmodell användas.\n\nSka inte användas för beskrivning av platsen där vården utförs eller liknande datafält. Det formellt korrekta tillvägagångssättet är istället att använda attribut från Referensmodellen vid dokumentationen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet.",
+          "keywords" : [ "organisasjon, leverandør, omsorgsperson, nettverk, gruppe" ],
+          "use" : "Brukes for å registrere detaljer om en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet, ofte ad hoc eller i de tilfeller når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.\n\nFor eksempel:\n- kopiinnhaver av av et fremtidig behandlingsvalg ved å bruke \"Kopiholder\"-SLOTet i arketypen \"EVALUATION.advance_care_directive\" (Fremtidig behandlingsvalg).\n- navn og kontaktdetaljer for en organisasjon som yter hjemmehjelp til en enkeltperson.\n\nDenne arketypen er utformet for å registrere detaljer om formelt anerkjente enheter, for eksempel en registrert virksomhet, et sykehus og dets \"underorganisasjoner\", en operativt separat eller spesialisert satellittklinikk eller hjemmetjeneste. Den kan også brukes til å registrere kontaktinformasjon om mer uformelle nettverk eller grupper, for eksempel en lokal støttegruppe.\n\nDenne arketypen kan også brukes som en midlertidig erstatning for formelle demografiske data når man gjennomgår et templat med domeneeksperter - for eksempel en vurdering der man i templatet forventer å se detaljer om en organisasjon i et vurderingsskjema.",
+          "misuse" : "Brukes ikke til å representere, erstatte eller vedlikeholde formelle demografiske opplysninger. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\n\nBrukes ikke for å representere behandlingssted eller lignende dataelementer, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about an organisation as they are known or understood in the course of clinical documentation.",
+          "keywords" : [ "organisation, organization, provider, carer, network, group" ],
+          "use" : "Use to record details of an organisation as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype; or\n- the name and contact details of an organisation providing home care to an individual.\n\nThis archetype has been designed to carry details of formally recognised entities, such as a registered business, a hospital and its recognised 'sub-organisations', such as an operationally separate or specialised satellite clinic or home care service. It may also be used to carry contact information about more informal networks or groups, such as a local community support group.\n\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see an organisations' details on an assessment form.",
+          "misuse" : "Not to be used to represent, replace or maintain an official register or index. Use a formal Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\n\nNot to be used to represent the location of care and similar data elements that should be represented formally in the health record using the Reference Model attributes.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation.v1",
     "differential" : true,
@@ -526,6 +667,15 @@
           "nodeId" : "at0035.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "1..1",
+          "nodeId" : "at0062.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-organisation_context-002.v0",
+          "referenceType" : "archetypeOverlay"
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -611,7 +761,69 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "6a480575b55a8f027e0ee9aa611f5b18"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung von Informationen zur einer Organisation, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden.",
+          "keywords" : [ "Organisation, Anbieter, Versorger, Betreuer, Netzwerk, Verbund, Gruppe" ],
+          "use" : "Der Archetyp wird verwendet, um Informationen zur einer Organisation darzustellen, wie sie bekannt sind oder im Rahmen der klinischen Dokumentation verstanden werden, oft ad hoc oder wenn die Verwendung von einem formellen demografischen Register oder einem Index nicht angemessen oder nicht möglich ist.\nBeispiele beinhalten:\n- der Inhaber einer Patientenverfügung unter Verwendung des SLOT „Inhaber der Kopie“ innerhalb des Archetyps EVALUATION.advance_care_directive oder\n- Name und Kontaktdaten einer Organisation, die die Betreuung einer Person in ihrem zu Hause übernimmt.\n\nDieser Archetyp wurde entwickelt, um Angaben zu offiziell anerkannten Einrichtungen, wie einem eingetragenen Unternehmen, einem Krankenhaus und seinen anerkannten „Unterorganisationen“, wie einer operativ getrennten oder spezialisierten Satellitenklinik oder einem häuslichen Pflegedienst, zu enthalten. Es kann auch verwendet werden, um Kontaktinformationen über informellere Netzwerke oder Gruppen darzustellen, wie z. B. eine lokale Selbsthilfegruppe.\n\nDieser Archetyp könnte auch als Proxy für formale demografische Daten verwendet werden, wenn ein Template mit Domänenexperten überprüft wird – beispielsweise bei einer Bewertung, bei der die Prüfer erwarten würden, dass die Details zu der Organisation oben auf dem Bewertungsformular angezeigt werden.",
+          "misuse" : "Der Archetyp darf nicht verwendet werden, um ein offizielles Register oder einen Index darzustellen, zu ersetzen oder zu führen. Verwenden Sie zu diesem Zweck einen formellen Gesundheitsanbieter-Index (Health Provider Index) oder Archetypen, die auf dem openEHR Demographic Information Model basieren.\n\nDer Archetyp darf nicht verwendet werden, um den Pflegeort und ähnliche Datenelemente darzustellen, die formal in der Patientenakte unter Verwendung der Reference Model-Attribute dargestellt werden sollten.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera information om en organisation på det sätt som det ska representeras i en journalanteckning.\n",
+          "keywords" : [ "organisation, vårdföretag, leverantör, vårdgivare, vårdenhet, enhet, avdelning, nätverk, grupp" ],
+          "use" : "Används för att registrera information om en organisation på det sätt som är etablerat och gör den begriplig i den kliniska dokumentationen. Ofta sker detta som en lösning när det inte är lämpligt eller möjligt att använda ett formellt demografiskt register eller index. \n\nExempel på detta omfattar: \n- rättighetsinnehavaren av ett vårdsystem för avancerat sjukvård och som utnyttjar den SLOT för Copyholder som finns i inbäddad i arketypen EVALUATION.advance_care_directive\n- namn och kontaktuppgifter som kan behövas vid hemsjukvård.\n\nAnvänds för att dokumentera information om etablerade enheter som vårdföretag eller sjukhus med organisatoriskt underliggande enheter som även har utlokaliserade enheter eller som bedriver hemsjukvård.\nArketypen kan även användas för dokumentation om mer informella nätverk och grupper, som samhällsorganiserade lokala stödgrupper. \n\nAnvänds även för att ersätta en mer formellt genererad demografisk data, när exempelvis domänexperter granskar en mall, där granskare förväntar sig att se information om en organisation i ett formulär.\n",
+          "misuse" : "Ska inte användas för att ersätta eller underhålla ett officiellt register eller index. Då skall istället arketyper baserat på openEHRs demografiska informationsmodell användas.\n\nSka inte användas för beskrivning av platsen där vården utförs eller liknande datafält. Det formellt korrekta tillvägagångssättet är istället att använda attribut från Referensmodellen vid dokumentationen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere detaljer om en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet.",
+          "keywords" : [ "organisasjon, leverandør, omsorgsperson, nettverk, gruppe" ],
+          "use" : "Brukes for å registrere detaljer om en organisasjon, som man har informasjon om eller har forstått, i det kliniske dokumentasjonsarbeidet, ofte ad hoc eller i de tilfeller når det ikke er ønskelig eller mulig å bruke et formelt demografisk register eller indeks.\n\nFor eksempel:\n- kopiinnhaver av av et fremtidig behandlingsvalg ved å bruke \"Kopiholder\"-SLOTet i arketypen \"EVALUATION.advance_care_directive\" (Fremtidig behandlingsvalg).\n- navn og kontaktdetaljer for en organisasjon som yter hjemmehjelp til en enkeltperson.\n\nDenne arketypen er utformet for å registrere detaljer om formelt anerkjente enheter, for eksempel en registrert virksomhet, et sykehus og dets \"underorganisasjoner\", en operativt separat eller spesialisert satellittklinikk eller hjemmetjeneste. Den kan også brukes til å registrere kontaktinformasjon om mer uformelle nettverk eller grupper, for eksempel en lokal støttegruppe.\n\nDenne arketypen kan også brukes som en midlertidig erstatning for formelle demografiske data når man gjennomgår et templat med domeneeksperter - for eksempel en vurdering der man i templatet forventer å se detaljer om en organisasjon i et vurderingsskjema.",
+          "misuse" : "Brukes ikke til å representere, erstatte eller vedlikeholde formelle demografiske opplysninger. Bruk et formelt pasientregister, helsepersonellregister eller arketyper basert på openEHR demografisk informasjonsmodell til dette formålet.\n\nBrukes ikke for å representere behandlingssted eller lignende dataelementer, som skal representeres formelt i pasientjournalen. Bruk attributter fra Referansemodellen for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record details about an organisation as they are known or understood in the course of clinical documentation.",
+          "keywords" : [ "organisation, organization, provider, carer, network, group" ],
+          "use" : "Use to record details of an organisation as they are known or understood in the course of clinical documentation, often ad hoc or when it is not appropriate or possible to use a formal demographic register or index. Examples include:\n- the copyholder of an advanced care record, using the 'Copyholder' SLOT within the EVALUATION.advance_care_directive archetype; or\n- the name and contact details of an organisation providing home care to an individual.\n\nThis archetype has been designed to carry details of formally recognised entities, such as a registered business, a hospital and its recognised 'sub-organisations', such as an operationally separate or specialised satellite clinic or home care service. It may also be used to carry contact information about more informal networks or groups, such as a local community support group.\n\nThis archetype could also be used as a proxy for formal demographic data when reviewing a template with domain experts - for example, an assessment where reviewers would expect to see an organisations' details on an assessment form.",
+          "misuse" : "Not to be used to represent, replace or maintain an official register or index. Use a formal Health Provider Index for this purpose, or archetypes based on the openEHR Demographic Information Model.\n\nNot to be used to represent the location of care and similar data elements that should be represented formally in the health record using the Reference Model attributes.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation.v1",
     "differential" : true,
@@ -694,6 +906,57 @@
       },
       "otherDetails" : { }
     } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "a16554e6-c94c-407a-a686-96ae563b4845",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "10fb4eaffebc8c3ce3ac2b72ae84a9c7"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_context.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-organisation_context-002.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "5e2334f0-f08d-3162-897d-fb51f76bd9fe",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
