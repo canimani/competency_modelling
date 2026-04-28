@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6e9330234df19a4966f9789440456aee">
+		["MD5-CAM-1.0.1"] = <"0398b713cabd780ed78d7cb6ee59b2c6">
 		["build_uid"] = <"4817ae5f-331b-379c-9237-dbe978512a3c">
 	>
 
@@ -38,6 +38,20 @@ definition
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- min_time_at_current_level_months
 				value matches {
 					DV_COUNT matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- required_overall_assessment
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0010,    -- met
+							at0011]    -- partially_met
+						}
+					}
 				}
 			}
 			ELEMENT[at0003] occurrences matches {0..*} matches {    -- required_sfia_codes
@@ -111,6 +125,18 @@ ontology
 				>
 				["at0008"] = <
 					text = <"requires_clinical_approval">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"required_overall_assessment">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"met">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"partially_met">
 					description = <"">
 				>
 			>
