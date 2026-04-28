@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"a2805eef3c110b8af4fdd7c64c31a478">
+		["MD5-CAM-1.0.1"] = <"32d7c5aad17c721dc0fdbde5527259a7">
 		["build_uid"] = <"184737d4-49d9-36ef-a6fe-eb9289464780">
 	>
 
@@ -40,9 +40,15 @@ definition
 					DV_TEXT matches {*}
 				}
 			}
-			allow_archetype CLUSTER[at0003] occurrences matches {0..*} matches {    -- role_definition
-				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.role_definition\.v0/}
+			ELEMENT[at0007] matches {    -- univeral_role_definition
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- ecosystem_role_override_ref
+				value matches {
+					DV_IDENTIFIER matches {*}
+				}
 			}
 			allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- entry_rule
 				include
@@ -76,10 +82,6 @@ ontology
 					text = <"step_label">
 					description = <"">
 				>
-				["at0003"] = <
-					text = <"role_definition">
-					description = <"">
-				>
 				["at0004"] = <
 					text = <"entry_rule">
 					description = <"">
@@ -90,6 +92,14 @@ ontology
 				>
 				["at0006"] = <
 					text = <"typical_duration_month">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"univeral_role_definition">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"ecosystem_role_override_ref">
 					description = <"">
 				>
 			>
