@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1f5517c501fcfb2fe59cb4bc87e42f51">
+		["MD5-CAM-1.0.1"] = <"005228f55170efb7fd0020a8bd021c46">
 		["build_uid"] = <"7b6870d8-8078-3101-b1b0-182a28a32a7e">
 	>
 
@@ -38,6 +38,21 @@ definition
 			ELEMENT[at0004] matches {    -- ecosystem_name
 				value matches {
 					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- ecosystem_maturity
+				value matches {
+					DV_COUNT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0008,    -- developing
+							at0009,    -- mature
+							at0010]    -- emerging
+						}
+					}
 				}
 			}
 			allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- organisations
@@ -73,6 +88,22 @@ ontology
 				>
 				["at0006"] = <
 					text = <"organisations_groups">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"ecosystem_maturity">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"developing">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"mature">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"emerging">
 					description = <"">
 				>
 			>
