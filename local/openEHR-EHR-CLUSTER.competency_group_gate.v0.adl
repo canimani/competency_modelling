@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"295fbaeb39c04d4b2d80f8df3d56a9de">
+		["MD5-CAM-1.0.1"] = <"14934354a8aa77b03f3f2963051ca151">
 		["build_uid"] = <"ff5529b8-cd51-381e-b1d4-f2605ac36956">
 	>
 
@@ -67,7 +67,7 @@ definition
 					DV_COUNT matches {*}
 				}
 			}
-			ELEMENT[at0012] occurrences matches {0..1} matches {    -- rational
+			ELEMENT[at0012] matches {    -- rationale
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -128,7 +128,7 @@ ontology
 					description = <"">
 				>
 				["at0012"] = <
-					text = <"rational">
+					text = <"rationale">
 					description = <"">
 				>
 			>
