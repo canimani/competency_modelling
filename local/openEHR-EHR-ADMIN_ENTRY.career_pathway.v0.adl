@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"baec4d49ffdf65250b0ba2b3f2f98436">
+		["MD5-CAM-1.0.1"] = <"f64fe4b3e46f022a0ba9e8fc0a58192a">
 		["build_uid"] = <"f3702927-7ca1-3e5e-ad19-4ac6552a9467">
 	>
 
@@ -47,24 +47,14 @@ definition
 							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0006] occurrences matches {0..1} matches {    -- univeral_role_definition
-						value matches {
-							DV_IDENTIFIER matches {*}
-						}
-					}
-					ELEMENT[at0007] occurrences matches {0..1} matches {    -- ecosystem_role_override_ref
-						value matches {
-							DV_IDENTIFIER matches {*}
-						}
-					}
 					ELEMENT[at0005] occurrences matches {0..1} matches {    -- description
 						value matches {
 							DV_TEXT matches {*}
 						}
 					}
-					allow_archetype CLUSTER[at0008] occurrences matches {0..*} matches {    -- full_gate
+					allow_archetype CLUSTER[at0010] occurrences matches {2..*} matches {    -- steps
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.transisiton_gate\.v0/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.pathway_step\.v0/}
 					}
 				}
 			}
@@ -99,16 +89,8 @@ ontology
 					text = <"description">
 					description = <"">
 				>
-				["at0006"] = <
-					text = <"univeral_role_definition">
-					description = <"">
-				>
-				["at0007"] = <
-					text = <"ecosystem_role_override_ref">
-					description = <"">
-				>
-				["at0008"] = <
-					text = <"full_gate">
+				["at0010"] = <
+					text = <"steps">
 					description = <"">
 				>
 			>
