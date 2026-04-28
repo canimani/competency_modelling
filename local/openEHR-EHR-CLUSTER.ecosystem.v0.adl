@@ -23,19 +23,19 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"24252162655f639491df661da87297d3">
+		["MD5-CAM-1.0.1"] = <"1f5517c501fcfb2fe59cb4bc87e42f51">
 		["build_uid"] = <"7b6870d8-8078-3101-b1b0-182a28a32a7e">
 	>
 
 definition
 	CLUSTER[at0000] matches {    -- ecosystem
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0003] occurrences matches {0..1} matches {    -- ecosystem_id
+			ELEMENT[at0003] matches {    -- ecosystem_id
 				value matches {
 					DV_IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[at0004] occurrences matches {0..1} matches {    -- ecosystem_name
+			ELEMENT[at0004] matches {    -- ecosystem_name
 				value matches {
 					DV_TEXT matches {*}
 				}
