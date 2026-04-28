@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d9ae4534d0948e2dc361753bcf787c11">
+		["MD5-CAM-1.0.1"] = <"348ce3feb015b66a8468ae070d36f9a0">
 		["build_uid"] = <"545d4d07-5699-374c-ad87-da92332c11e7">
 	>
 
@@ -43,6 +43,18 @@ definition
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- group_type
 				value matches {
 					DV_CODED_TEXT matches {*}
+				}
+				name matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0009,    -- geographic network
+							at0010,    -- functional_cohort
+							at0011,    -- program_collaborative
+							at0012,    -- managed netowork
+							at0013]    -- workforce development center
+						}
+					}
 				}
 			}
 			allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- member_orgnisations
@@ -92,6 +104,26 @@ ontology
 				>
 				["at0008"] = <
 					text = <"description">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"geographic network">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"functional_cohort">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"program_collaborative">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"managed netowork">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"workforce development center">
 					description = <"">
 				>
 			>
