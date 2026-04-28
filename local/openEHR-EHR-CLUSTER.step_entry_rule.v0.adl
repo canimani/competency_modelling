@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"13fb72cc0d4d4361af7311841f93c7a1">
+		["MD5-CAM-1.0.1"] = <"57ac96a0907b4f8e528b68616763595d">
 		["build_uid"] = <"c1f418ff-afdf-31cd-b4b4-1cb8077325de">
 	>
 
@@ -71,7 +71,7 @@ definition
 			}
 			allow_archetype CLUSTER[at0010] matches {    -- tranistion_gate
 				include
-					archetype_id/value matches {/openEHR-EHR-CLUSTER\.transisiton_gate\.v0/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.transition_gate\.v0/}
 			}
 			allow_archetype CLUSTER[at0011] occurrences matches {0..*} matches {    -- additional_requirements
 				include
