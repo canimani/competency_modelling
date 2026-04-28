@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"54a45437a3191f3515fd06e71d4b792e">
+		["MD5-CAM-1.0.1"] = <"4c20745db66290a03815a9c10f889a57">
 		["build_uid"] = <"9df9b795-2634-3ec8-8b5f-530ea229705f">
 	>
 
@@ -50,8 +50,9 @@ definition
 							DV_CODED_TEXT matches {
 								defining_code matches {
 									[local::
-									at0014,    -- local role
-									at0015]    -- terminology
+									at0014,    -- simple role
+									at0015,    -- composite role
+									at0016]    -- consultive role
 								}
 							}
 						}
@@ -161,12 +162,16 @@ ontology
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"local role">
-					description = <"">
+					text = <"simple role">
+					description = <"single person-single org deployment">
 				>
 				["at0015"] = <
-					text = <"terminology">
-					description = <"e.g. SFIA constraned by issuer DV_IDNETIFIER">
+					text = <"composite role">
+					description = <"one person holds concurrent instances of organisations and the role combine differnt domians">
+				>
+				["at0016"] = <
+					text = <"consultive role">
+					description = <"advisoory and non executive role across multiple organisations">
 				>
 			>
 		>
