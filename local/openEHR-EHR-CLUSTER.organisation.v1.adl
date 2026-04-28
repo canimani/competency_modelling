@@ -122,7 +122,7 @@ HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven Inter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"57ef39748c2438d5d00d52d904be831f">
+		["MD5-CAM-1.0.1"] = <"6a480575b55a8f027e0ee9aa611f5b18">
 		["build_uid"] = <"c99cff91-c6d7-4097-805d-e9a53d62b111">
 		["revision"] = <"1.0.3">
 	>
@@ -210,7 +210,7 @@ definition
 			}
 			allow_archetype CLUSTER[at0062] occurrences matches {0..1} matches {    -- organisation_context
 				include
-					archetype_id/value matches {/.*/}
+					archetype_id/value matches {/openEHR-EHR-CLUSTER\.organisation_context\.v0/}
 			}
 		}
 	}
