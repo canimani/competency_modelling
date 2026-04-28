@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"389d6ec6590af9e7e9161e7daa828a72">
+		["MD5-CAM-1.0.1"] = <"1a444e87c95025a44f9ca752bcdb9f96">
 		["build_uid"] = <"9df9b795-2634-3ec8-8b5f-530ea229705f">
 	>
 
@@ -32,7 +32,7 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0002] occurrences matches {0..1} matches {    -- universal_role_id
+					ELEMENT[at0002] matches {    -- universal_role_id
 						value matches {
 							DV_IDENTIFIER matches {*}
 						}
@@ -42,17 +42,17 @@ definition
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0004] occurrences matches {0..1} matches {    -- role_type
+					ELEMENT[at0004] matches {    -- role_type
 						value matches {
 							DV_CODED_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0005] occurrences matches {0..1} matches {    -- issuing_authority
+					ELEMENT[at0005] matches {    -- issuing_authority
 						value matches {
 							DV_IDENTIFIER matches {*}
 						}
 					}
-					ELEMENT[at0006] occurrences matches {0..1} matches {    -- version
+					ELEMENT[at0006] matches {    -- version
 						value matches {
 							DV_TEXT matches {*}
 						}
@@ -74,7 +74,7 @@ definition
 						include
 							archetype_id/value matches {/.*/}
 					}
-					allow_archetype CLUSTER[at0013] occurrences matches {0..*} matches {    -- digital_health_skills_classifications
+					allow_archetype CLUSTER[at0013] occurrences matches {1..*} matches {    -- digital_health_skills_classifications
 						include
 							archetype_id/value matches {/openEHR-EHR-CLUSTER\.digital_health_skills_classification\.v0/}
 					}
