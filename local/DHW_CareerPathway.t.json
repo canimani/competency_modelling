@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "a7c87a30b68942a0379d6f537177e914",
+      "MD5-CAM-1.0.1" : "176422e7843b6f07e1d06596d01ef9a9",
       "PARENT:MD5-CAM-1.0.1" : "72fba1fe9d33586734b290758fc49f01"
     },
     "details" : {
@@ -183,7 +183,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "13fb72cc0d4d4361af7311841f93c7a1"
+        "PARENT:MD5-CAM-1.0.1" : "57ac96a0907b4f8e528b68616763595d"
       },
       "details" : { }
     },
@@ -201,6 +201,41 @@
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
         "children" : [ {
+          "@type" : "ARCHETYPE_SLOT",
+          "rmTypeName" : "CLUSTER",
+          "occurrences" : "1..1",
+          "nodeId" : "at0010",
+          "includes" : [ {
+            "@type" : "ASSERTION",
+            "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.transisiton_gate\\.v0/}",
+            "expression" : {
+              "@type" : "BINARY_OPERATOR",
+              "type" : "BOOLEAN",
+              "operator" : "matches",
+              "leftOperand" : {
+                "@type" : "MODEL_REFERENCE",
+                "type" : "STRING",
+                "precedenceOverriden" : false,
+                "referenceType" : "Attribute",
+                "path" : "archetype_id/value"
+              },
+              "rightOperand" : {
+                "@type" : "CONSTRAINT",
+                "type" : "STRING",
+                "precedenceOverriden" : false,
+                "referenceType" : "Constraint",
+                "item" : {
+                  "@type" : "C_STRING",
+                  "constraint" : [ "/openEHR-EHR-CLUSTER\\.transisiton_gate\\.v0/" ]
+                }
+              },
+              "precedenceOverriden" : false
+            },
+            "variables" : [ ]
+          } ],
+          "excludes" : [ ],
+          "closed" : false
+        }, {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "CLUSTER",
           "occurrences" : "0..1",
