@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"f1fec7183a67732b064042d1a7e338c6">
+		["MD5-CAM-1.0.1"] = <"d6a1f1a1dbd47062b7ab85ed6c5efd1c">
 		["build_uid"] = <"08ab3bcf-4eca-3b49-816d-dc06e0e9223e">
 	>
 
@@ -37,7 +37,7 @@ definition
 							DV_IDENTIFIER matches {*}
 						}
 					}
-					ELEMENT[at0003] occurrences matches {0..1} matches {    -- person_ehr_ref
+					ELEMENT[at0003] matches {    -- person_ehr_ref
 						value matches {
 							DV_EHR_URI matches {*}
 						}
@@ -57,6 +57,12 @@ definition
 							DV_IDENTIFIER matches {*}
 						}
 					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- person_competency_record_ref
+						value matches {
+							DV_URI matches {*}
+							DV_EHR_URI matches {*}
+						}
+					}
 					ELEMENT[at0008] occurrences matches {0..1} matches {    -- universal_role_ref
 						value matches {
 							DV_IDENTIFIER matches {*}
@@ -67,7 +73,7 @@ definition
 							DV_IDENTIFIER matches {*}
 						}
 					}
-					ELEMENT[at0010] occurrences matches {0..1} matches {    -- assignment_start
+					ELEMENT[at0010] matches {    -- assignment_start
 						value matches {
 							DV_DATE_TIME matches {*}
 						}
@@ -89,7 +95,7 @@ definition
 			ITEM_TREE[at0005] matches {*}    -- Item tree
 		}
 		other_participations cardinality matches {0..*; unordered} matches {
-			PARTICIPATION[at0014] occurrences matches {0..1} matches {*}    -- PARTICIPATION
+			PARTICIPATION[at0014] occurrences matches {0..*} matches {*}    -- other_partciaptions
 		}
 	}
 
@@ -150,7 +156,11 @@ ontology
 					description = <"">
 				>
 				["at0014"] = <
-					text = <"PARTICIPATION">
+					text = <"other_partciaptions">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"person_competency_record_ref">
 					description = <"">
 				>
 			>
