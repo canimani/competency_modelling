@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"55756b10e3ae6c66732a69ebf9654c74">
+		["MD5-CAM-1.0.1"] = <"917df6c03e9614fb8dba833ff7463c2f">
 		["build_uid"] = <"2c9ac6da-ac07-380b-ae5d-559ec13322d6">
 	>
 
@@ -73,12 +73,7 @@ definition
 					}
 					ELEMENT[at0010] occurrences matches {0..1} matches {    -- competency_profile_ref
 						value matches {
-							DV_EHR_URI matches {*}
-						}
-					}
-					ELEMENT[at0011] matches {    -- person_ehr_ref
-						value matches {
-							DV_EHR_URI matches {*}
+							DV_IDENTIFIER matches {*}
 						}
 					}
 					ELEMENT[at0012] matches {    -- universal_role_ref
@@ -86,7 +81,12 @@ definition
 							DV_IDENTIFIER matches {*}
 						}
 					}
-					ELEMENT[at0013] occurrences matches {0..1} matches {    -- ecosystem_role_ref
+					ELEMENT[at0013] matches {    -- ecosystem_role_ref
+						value matches {
+							DV_IDENTIFIER matches {*}
+						}
+					}
+					ELEMENT[at0014] matches {    -- person_competency_record_ref
 						value matches {
 							DV_IDENTIFIER matches {*}
 						}
@@ -144,16 +144,16 @@ ontology
 					text = <"competency_profile_ref">
 					description = <"">
 				>
-				["at0011"] = <
-					text = <"person_ehr_ref">
-					description = <"">
-				>
 				["at0012"] = <
 					text = <"universal_role_ref">
 					description = <"">
 				>
 				["at0013"] = <
 					text = <"ecosystem_role_ref">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"person_competency_record_ref">
 					description = <"">
 				>
 			>
