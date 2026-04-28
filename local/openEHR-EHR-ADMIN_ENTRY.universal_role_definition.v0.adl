@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"1a444e87c95025a44f9ca752bcdb9f96">
+		["MD5-CAM-1.0.1"] = <"eadbcc17a126174992f16a5d5b6840c6">
 		["build_uid"] = <"9df9b795-2634-3ec8-8b5f-530ea229705f">
 	>
 
@@ -72,7 +72,7 @@ definition
 					}
 					allow_archetype CLUSTER[at0010] occurrences matches {0..*} matches {    -- generic_skills_classification
 						include
-							archetype_id/value matches {/.*/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.generic_skills_classification\.v0/}
 					}
 					allow_archetype CLUSTER[at0013] occurrences matches {1..*} matches {    -- digital_health_skills_classifications
 						include
