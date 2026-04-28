@@ -19,10 +19,10 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.2.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "920cfe508d690126966d06ac8d4c5af6",
-      "PARENT:MD5-CAM-1.0.1" : "54a45437a3191f3515fd06e71d4b792e"
+      "MD5-CAM-1.0.1" : "cc61be37916f93e5fd212ddb0ea7f818",
+      "PARENT:MD5-CAM-1.0.1" : "4c20745db66290a03815a9c10f889a57"
     },
     "details" : {
       "en" : {
@@ -95,7 +95,7 @@
                     "terminologyId" : {
                       "value" : "local"
                     },
-                    "constraint" : [ "ac0.4" ],
+                    "constraint" : [ "ac0.10" ],
                     "selectedTerminologies" : [ ]
                   } ]
                 } ],
@@ -175,16 +175,10 @@
           "text" : "DHW_UniversalRoleDefinition",
           "description" : "universal_role_definition"
         },
-        "at0004.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0004.1",
-          "text" : "terminology",
-          "description" : "e.g. SFIA constraned by issuer DV_IDNETIFIER"
-        },
-        "ac0.4" : {
+        "ac0.10" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "(Synthesized)",
-          "code" : "ac0.4",
+          "code" : "ac0.10",
           "description" : ""
         }
       }
@@ -211,6 +205,36 @@
         "@type" : "VALUE_SET",
         "id" : "ac0.4",
         "members" : [ "at0015" ]
+      },
+      "ac0.5" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.5",
+        "members" : [ "at0014", "at0015" ]
+      },
+      "ac0.6" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.6",
+        "members" : [ "at0014", "at0015" ]
+      },
+      "ac0.7" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.7",
+        "members" : [ "at0014", "at0015", "at0016" ]
+      },
+      "ac0.8" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.8",
+        "members" : [ "at0014", "at0015", "at0016" ]
+      },
+      "ac0.9" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.9",
+        "members" : [ "at0014", "at0015", "at0016" ]
+      },
+      "ac0.10" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.10",
+        "members" : [ "at0014", "at0015", "at0016" ]
       }
     }
   },
@@ -234,7 +258,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "bdc7c9088e4d0fccecf7a9174196e9b5"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.competency_base.v0",
     "differential" : true,
@@ -285,7 +322,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "25c652bdcd24c91d5147cc77d4b97956"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.occupational_classification.v0",
     "differential" : true,
@@ -336,7 +386,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "355aed6febb9736a26035e681675b7ac"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.disciplinary_classification.v0",
     "differential" : true,
@@ -387,7 +450,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "e62925281fb7a3582add4e5fa03951a7"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.generic_skills_classification.v0",
     "differential" : true,
@@ -438,7 +514,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "ed23d77778b950f9af7f77a302a4d318"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.digital_health_skills_classification.v0",
     "differential" : true,
@@ -489,7 +578,20 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "b59fb5f4f0678f60a558493073cd9ae0"
       },
-      "details" : { }
+      "details" : {
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.organisation_role_mapping.v0",
     "differential" : true,
