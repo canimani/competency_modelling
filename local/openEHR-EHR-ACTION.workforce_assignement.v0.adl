@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"d6a1f1a1dbd47062b7ab85ed6c5efd1c">
+		["MD5-CAM-1.0.1"] = <"079f27b6e4be6404288f9d81b77883a8">
 		["build_uid"] = <"08ab3bcf-4eca-3b49-816d-dc06e0e9223e">
 	>
 
@@ -81,6 +81,14 @@ definition
 					ELEMENT[at0012] occurrences matches {0..1} matches {    -- assignement_end
 						value matches {
 							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- ISAM_status
+						value matches {
+							DV_CODED_TEXT matches {*}
+						}
+						name matches {
+							DV_CODED_TEXT matches {*}
 						}
 					}
 					ELEMENT[at0013] occurrences matches {0..1} matches {    -- destination_organisation_ref
@@ -161,6 +169,10 @@ ontology
 				>
 				["at0015"] = <
 					text = <"person_competency_record_ref">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"ISAM_status">
 					description = <"">
 				>
 			>
